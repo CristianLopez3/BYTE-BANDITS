@@ -1,4 +1,4 @@
-package com.sena.senasoft.domain;
+package com.sena.senasoft.domain.user;
 
 public record UserListDto(
         String name,
@@ -7,5 +7,8 @@ public record UserListDto(
         String city
 ) {
 
+    public UserListDto(User user){
+        this(user.getName(), user.getEmail(), user.getEducation(), user.getCity());
+    }
 
 }

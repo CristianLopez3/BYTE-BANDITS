@@ -1,15 +1,16 @@
-package com.sena.senasoft.domain;
+package com.sena.senasoft.domain.user;
 
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.awt.print.Pageable;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class UserServiceImpl implements IUserService{
+public class UserServiceImpl implements IUserService {
 
     private final UserRepository userRepository;
 
@@ -26,6 +27,7 @@ public class UserServiceImpl implements IUserService{
         user.setCity(userDto.city());
         userRepository.save(user);
         return new UserResponseDataDto(user);
+
     }
 
     @Override
@@ -34,9 +36,11 @@ public class UserServiceImpl implements IUserService{
     }
 
     @Override
-    public Page<UserListDto> getUserList(Pageable pagination) {
-        return null;
+    public List<UserListDto> getUserList() {
+        List<User> users = userRepository.findAll();
+        return users.stream().map(UserListDto::new).collect(Collectors.toList());
     }
+
 
 
 

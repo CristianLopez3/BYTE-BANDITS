@@ -1,4 +1,4 @@
-package com.sena.senasoft.domain;
+package com.sena.senasoft.domain.user;
 
 public enum Role {
 

@@ -1,6 +1,7 @@
-package com.sena.senasoft.domain;
+package com.sena.senasoft.domain.user;
 
 
+import com.sena.senasoft.domain.user.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
