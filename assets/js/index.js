@@ -1,0 +1,1 @@
+const contentMessage = document.getElementById("message").innerHTML = "Js Funcionando";
