@@ -5,9 +5,10 @@
 }
 
 :root {
-    --color-yellow: #FABE1B;
-    --color-orange: #FC7011;
-    --color-red: #EC203E;   
+    --color-1: #006DFF;
+    --color-2: #F4F4F4;
+    --color-3: #ffffff; 
+    --color-4: #212529;  
 }
 
 .container{
