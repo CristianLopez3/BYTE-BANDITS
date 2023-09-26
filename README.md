@@ -44,6 +44,8 @@ arise during the development process.
 - MVC
 - DTO
 - DAO
+- Client - Server
+- Separation of concerns
 
 ## Usage Instructions
 
