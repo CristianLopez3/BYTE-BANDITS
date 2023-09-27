@@ -1,0 +1,60 @@
+.header-profile{
+    color: var(--color-1);
+    background-color: var(--color-4);
+    font-size: 20px;
+    box-shadow: 0px 0px 10px var(--color-4);
+}
+
+/* Score */
+
+.container-score{
+    background-color: var(--color-5);
+}
+
+.container-score div.card > .container{
+    background-color: var(--color-1);
+    color: var(--color-3);
+    font-size: 18px;
+} 
+
+.card-top{
+    height: 100px;
+    margin-top: 5%;
+}
+
+.card-top > .container{
+    background-color: var(--color-6) !important;
+}
+
+/* User Data */
+
+.container-user-data form{
+    max-width: 800px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+/* Forums */
+
+.container-forums{
+    background-color: var(--color-1);
+    color: var(--color-6);
+}
+
+.container-forums .container-forum{
+    width: 300px;
+    display: flex;
+    border: 1px solid black;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
