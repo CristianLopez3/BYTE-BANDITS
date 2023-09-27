@@ -1,8 +1,5 @@
 package com.sena.senasoft.domain.form;
 
-
-
-
 import com.sena.senasoft.domain.user.User;
 import com.sena.senasoft.domain.user.UserServiceImpl;
 import jakarta.persistence.EntityNotFoundException;
@@ -24,11 +21,12 @@ public class FormServiceImpl implements IFormService {
     @Override
     public Form saveForm(FormDto formDto) {
         Form form = new Form();
+        User user = userService.getUser(formDto.creator());
         form.setTitle(formDto.title());
         form.setDescription(formDto.description());
         form.setStart(formDto.start());
         form.setEnd(formDto.end());
-        form.setCreador(userService.getUser(formDto.creator()));
+        form.setCreator(user);
         return formRepository.save(form);
     }
 
@@ -36,6 +34,7 @@ public class FormServiceImpl implements IFormService {
     public List<Form> getFormList() {
         return formRepository.findAll();
     }
+
 
     @Override
     public Form getForm(Long id) {

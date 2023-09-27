@@ -1,6 +1,9 @@
 package com.sena.senasoft.domain.form;
 
+import lombok.Getter;
+
 import java.time.LocalDate;
+
 
 public record FormDto (
         String title,
@@ -17,7 +20,7 @@ public record FormDto (
                 form.getDescription(),
                 form.getStart(),
                 form.getEnd(),
-                form.getCreador().getId()
+                form.getCreator().getId()
         );
     }
 }

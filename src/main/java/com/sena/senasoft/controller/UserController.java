@@ -28,6 +28,11 @@ public class UserController {
         return ResponseEntity.ok(userService.getUserList());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<UserResponseDataDto> getUser(@PathVariable Long id){
+        User user = userService.getUser(id);
+        return ResponseEntity.ok(new UserResponseDataDto(user));
+    }
 
     @PutMapping("/{id}")
     public ResponseEntity<UserResponseDataDto> updateUser(

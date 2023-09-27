@@ -20,16 +20,12 @@ public class Form {
     private Long id;
 
     private String title;
-
     private String description;
-
-
     private LocalDate start;
-
     private LocalDate end;
 
     @ManyToOne
-    @JoinColumn(name = "creador_id", referencedColumnName = "id")
-    private User creador;
+    @JoinColumn(name = "creator_id", referencedColumnName = "id")
+    private User creator;
 
 }
