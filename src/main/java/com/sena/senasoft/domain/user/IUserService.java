@@ -13,8 +13,11 @@ public interface IUserService {
 
     UserResponseDataDto saveUser(UserRegisterDataDto userDto);
 
-    UserResponseDataDto updateUser(UserUpdateDto userUpdateDto);
+    UserResponseDataDto update(Long id, UserUpdateDto userUpdateDto);
 
+    void deleteUser(Long id);
+
+    User getUser(Long id);
 
     List<UserListDto> getUserList();
 }

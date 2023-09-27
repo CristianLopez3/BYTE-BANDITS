@@ -1,10 +1,7 @@
 package com.sena.senasoft.controller;
 
 
-import com.sena.senasoft.domain.user.UserListDto;
-import com.sena.senasoft.domain.user.UserRegisterDataDto;
-import com.sena.senasoft.domain.user.UserResponseDataDto;
-import com.sena.senasoft.domain.user.UserServiceImpl;
+import com.sena.senasoft.domain.user.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.web.PageableDefault;
@@ -31,4 +28,13 @@ public class UserController {
         return ResponseEntity.ok(userService.getUserList());
     }
 
+
+    @PutMapping("/{id}")
+    public ResponseEntity<UserResponseDataDto> updateUser(
+            @PathVariable Long id,
+            @RequestBody UserUpdateDto updatedDto
+    ){
+        UserResponseDataDto userResponse =userService.update(id, updatedDto);
+        return ResponseEntity.ok(userResponse);
+    }
 }
