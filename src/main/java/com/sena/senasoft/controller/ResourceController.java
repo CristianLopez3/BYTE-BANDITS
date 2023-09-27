@@ -13,6 +13,7 @@ import java.util.List;
 @RequestMapping("/resource")
 @RequiredArgsConstructor
 public class ResourceController {
+
     /**
      * Dependency injection
      */

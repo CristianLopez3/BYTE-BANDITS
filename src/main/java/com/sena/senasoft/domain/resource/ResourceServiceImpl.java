@@ -24,6 +24,7 @@ public class ResourceServiceImpl implements IResourceService {
         Resource resource = new Resource();
         resource.setDescription(resourceDto.description());
         resource.setUser(user);
+        resource.setUrl(resourceDto.url());
         return resourceRepository.save(resource);
     }
 
@@ -49,6 +50,7 @@ public class ResourceServiceImpl implements IResourceService {
         }
         Resource realResource = resource.get();
         realResource.setDescription(resourceDto.description());
+        realResource.setUrl(resourceDto.url());
         return resourceRepository.save(realResource);
     }
 

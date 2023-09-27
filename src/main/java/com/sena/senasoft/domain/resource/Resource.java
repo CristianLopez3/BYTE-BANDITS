@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity
+@Table(name = "tb_resources")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,6 +18,7 @@ public class Resource {
 
     private String description;
     private String url;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

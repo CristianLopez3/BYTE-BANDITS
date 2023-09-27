@@ -5,12 +5,6 @@ public record ResourceDto(
         String url,
         Long user
 ) {
-    public ResourceDto(Resource resource) {
-        this(
-                resource.getDescription(),
-                resource.getUrl(),
-                resource.getUser().getId()
 
-        );
-    }
+
 }
