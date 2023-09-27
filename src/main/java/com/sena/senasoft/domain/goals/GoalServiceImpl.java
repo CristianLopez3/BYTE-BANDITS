@@ -19,9 +19,9 @@ public class GoalServiceImpl implements IGoalService {
     private final GoalRepository goalRepository;
     private final UserServiceImpl userService;
     @Override
-    public Goals saveGoal(GoalDto goalDto) {
+    public Goal saveGoal(GoalDto goalDto) {
         User user = userService.getUser(goalDto.user());
-        Goals goals = new Goals();
+        Goal goals = new Goal();
         goals.setUser(user);
         goals.setDescription(goalDto.description());
         goals.setStart(goalDto.start());
@@ -30,13 +30,13 @@ public class GoalServiceImpl implements IGoalService {
     }
 
     @Override
-    public List<Goals> getGoalList() {
+    public List<Goal> getGoalList() {
         return null;
     }
 
     @Override
-    public Goals getGoal(Long id) {
-        Optional<Goals> goals = goalRepository.findById(id);
+    public Goal getGoal(Long id) {
+        Optional<Goal> goals = goalRepository.findById(id);
         if (goals.isEmpty()) {
             throw new EntityNotFoundException("Goal not found");
         }
@@ -44,12 +44,12 @@ public class GoalServiceImpl implements IGoalService {
     }
 
     @Override
-    public Goals updateGoal(Long id, GoalDto goalDto) {
-        Optional<Goals> goals = goalRepository.findById(id);
+    public Goal updateGoal(Long id, GoalDto goalDto) {
+        Optional<Goal> goals = goalRepository.findById(id);
         if (goals.isEmpty()) {
             throw new EntityNotFoundException("Form not found");
         }
-        Goals realGoal = goals.get();
+        Goal realGoal = goals.get();
         realGoal.setDescription(goalDto.description());
         realGoal.setFinish(goalDto.finish());
         realGoal.setStart(goalDto.start());
@@ -58,7 +58,7 @@ public class GoalServiceImpl implements IGoalService {
 
     @Override
     public void deleteGoal(Long id) {
-        Optional<Goals> goals = goalRepository.findById(id);
+        Optional<Goal> goals = goalRepository.findById(id);
         if (goals.isEmpty()) {
             throw new EntityNotFoundException("Goal not found");
         }
@@ -69,7 +69,7 @@ public class GoalServiceImpl implements IGoalService {
      * @return list of choices for a given question
      */
     @Override
-    public List<Goals> findGoalByUser(Long id) {
+    public List<Goal> findGoalByUser(Long id) {
         return goalRepository.findByUserId(id);
     }
 }

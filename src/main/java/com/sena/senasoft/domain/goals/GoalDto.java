@@ -1,7 +1,5 @@
 package com.sena.senasoft.domain.goals;
 
-import com.sena.senasoft.domain.resource.Resource;
-
 import java.util.Date;
 
 public record GoalDto(
@@ -10,9 +8,9 @@ public record GoalDto(
         Date finish,
         Long user
 ) {
-    
 
-    public GoalDto(Goals goals){
+
+    public GoalDto(Goal goals){
             this(
                     goals.getDescription(),
                     goals.getStart(),

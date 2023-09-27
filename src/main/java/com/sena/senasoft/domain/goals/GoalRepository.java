@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface GoalRepository extends JpaRepository<Goals, Long> {
-    List<Goals> findByUserId(Long id);
+public interface GoalRepository extends JpaRepository<Goal, Long> {
+    List<Goal> findByUserId(Long id);
 }

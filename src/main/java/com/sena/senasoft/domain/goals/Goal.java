@@ -1,6 +1,5 @@
 package com.sena.senasoft.domain.goals;
 
-import com.sena.senasoft.domain.question.Question;
 import com.sena.senasoft.domain.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -14,7 +13,8 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Goals {
+public class Goal {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
