@@ -18,8 +18,10 @@ public class Choice {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String description;
+
     @ManyToOne
     @JoinColumn(name = "question_id")
-    private Question questions;
+    private Question question;
+
 
 }

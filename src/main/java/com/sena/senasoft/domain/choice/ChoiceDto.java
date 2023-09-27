@@ -2,7 +2,7 @@ package com.sena.senasoft.domain.choice;
 
 public record ChoiceDto(
         String description,
-        Long choice
+        Long question
 ) {
     public ChoiceDto(Choice choice) {
         this(
@@ -10,4 +10,5 @@ public record ChoiceDto(
                 choice.getId()
         );
     }
+
 }

@@ -7,5 +7,7 @@ import java.util.List;
 
 @Repository
 public interface ChoiceRepository extends JpaRepository <Choice, Long> {
-List<Choice> findByQuestionId(Long id);
+
+    List<Choice> findByQuestionId(Long id);
+
 }
