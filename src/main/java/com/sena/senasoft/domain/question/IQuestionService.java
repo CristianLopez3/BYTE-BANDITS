@@ -7,13 +7,13 @@ import java.util.List;
 
 public interface IQuestionService {
 
-    Question saveQuestion(FormDto formDto);
+    Question saveQuestion(QuestionDto questionDto);
 
     List<Question> getFormList();
 
     Question getQuestion(Long id);
 
-    Question updateQuestion(Long id, QuestionDto questioDto);
+    Question updateQuestion(Long id, QuestionDto questionDto);
 
     void deleteQuestion(Long id);
 
