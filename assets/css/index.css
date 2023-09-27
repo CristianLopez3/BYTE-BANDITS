@@ -1,0 +1,188 @@
+/* SERVICIOS */
+
+#servicios {
+    width: 100%;
+    position: relative;
+    padding: 150px 0 100px;
+    text-align: left;
+    background: var(--color-2);
+}
+
+#servicios h2 {
+    color: var(--color-6);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#servicios h2 span {
+    color: var(--color-1);
+    border-bottom: 2px solid var(--color-1);
+}
+
+#servicios .row {
+    padding-top: 70px;
+}
+
+#servicios .card-services {
+    background: var(--color-2);
+    border-radius: 20px;
+    position: relative;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    text-align: left;
+    transition: .4s;
+    max-width: 290px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    box-shadow: 0px 4px 4px 0px #828282;
+}
+
+#servicios .card-services:hover {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+}
+
+#servicios .card-services .header-card {
+    background: var(--color-1);
+    padding: 40px 0;
+    text-align: center !important;
+    border-radius: 20px 20px 0 0;
+}
+
+.card-services .header-card h3 {
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+#servicios .card-services h5{
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+#servicios .card-services p{
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+/* Planes */
+
+
+#planes {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 100px 0 100px;
+    background-color: var(--color-4);
+}
+
+#planes h2 {
+    color: #ffff;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+#planes p {
+    font-size: 20px;
+    color: #c6c6c6;
+}
+
+#planes .lapso {
+    background: #292c36;
+    margin-top: 50px;
+    padding: 50px 70px;
+    border-radius: 20px;
+    text-align: left;
+}
+
+#planes .lapso ul {
+    border: 0 transparent;
+    margin-bottom: 50px;
+    background: #3f434f;
+    max-width: 220px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+#planes .lapso ul li button {
+    background: transparent;
+    color: #fff;
+    border-radius: 30px;
+    width: 100px;
+    border: 0 transparent;
+}
+
+#planes .lapso ul li button.active {
+    background: var(--color-1);
+}
+
+#planes .lapso p {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#planes .lapso p::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--color-1);
+    border-radius: 10px;
+    right: 0;
+    top: 10px;
+}
+
+#planes .plan {
+    background: transparent;
+    padding-top: 20px;
+}
+
+#planes .plan .accordion {
+    background: transparent;
+}
+
+#planes .plan .accordion-item,
+#planes .plan .accordion-item button {
+    background: transparent;
+}
+
+#planes .plan .accordion-item {
+    border-radius: 20px;
+    margin: 30px;
+    border: 1px solid #fff;
+}
+
+#planes .plan h2 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+#planes .plan .accordion-item button {
+    color: #fff;
+    box-shadow: 0 0 0 transparent;
+    padding: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+#planes .plan .accordion-item button.accordion-button {
+    background: var(--color-1);
+}
+
+#planes .plan .accordion-item button.accordion-button.collapsed {
+    background: transparent;
+}
+
+#planes .plan .accordion-item .accordion-body {
+    color: #fff;
+    font-size: 20px;
+}
