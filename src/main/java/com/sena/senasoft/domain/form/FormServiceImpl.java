@@ -3,11 +3,14 @@ package com.sena.senasoft.domain.form;
 
 
 
+import com.sena.senasoft.domain.user.User;
 import com.sena.senasoft.domain.user.UserServiceImpl;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -31,12 +34,16 @@ public class FormServiceImpl implements IFormService {
 
     @Override
     public List<Form> getFormList() {
-        return null;
+        return formRepository.findAll();
     }
 
     @Override
     public Form getForm(Long id) {
-        return null;
+        Optional<Form> form = formRepository.findById(id);
+        if(form.isEmpty()){
+            throw new EntityNotFoundException("Form not found");
+        }
+        return form.get();
     }
 
     @Override
