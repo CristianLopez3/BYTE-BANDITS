@@ -11,6 +11,7 @@ public record UserRegisterDataDto(
         String education,
         Date birthDate,
         String city,
+        String interest,
         Role role
 ) {
 
