@@ -4,7 +4,7 @@
         <div><p>© BYTE BANDITS - TODOS LOS DERECHOS RESERVADOS - #SENA SOFT 2023</p></div>
     </footer>
     <!-- Document -->
-    <?php echo (isset($$js)) ? $js : "" ?>
+    <?php echo (isset($js)) ? $js : "" ?>
     <!-- Font Awesome - Icons -->
     <script src="https://kit.fontawesome.com/7fa9974a48.js" crossorigin="anonymous"></script>
     <!-- Boostrap Link -->

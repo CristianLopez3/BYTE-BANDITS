@@ -1,10 +1,9 @@
 // Spring boot URL 
-export const apiUrl  = "http://localhost:8080";
+export const apiUrl  = "http://localhost:9999";
 
 // Header
 export const commonHeaders = {
-  'Content-Type': 'application/json',
-  "Access-Control-Allow-Origin": "*"
+  'Content-Type': 'application/json'
 };
 
 
