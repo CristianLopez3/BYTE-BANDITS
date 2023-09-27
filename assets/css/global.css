@@ -7,8 +7,9 @@
 :root {
     --color-1: #006DFF;
     --color-2: #F4F4F4;
-    --color-3: #ffffff; 
-    --color-4: #212529;  
+    --color-3: #FFFFFF; 
+    --color-4: #212529;
+    --color-5: #292C36;  
 }
 
 .container{
