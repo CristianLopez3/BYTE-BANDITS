@@ -3,6 +3,7 @@ package com.sena.senasoft.domain.user;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.awt.print.Pageable;
@@ -15,15 +16,15 @@ import java.util.stream.Collectors;
 public class UserServiceImpl implements IUserService {
 
     private final UserRepository userRepository;
+    private final BCryptPasswordEncoder passwordEncoder;
 
     @Override
     public UserResponseDataDto saveUser(UserRegisterDataDto userDto) {
         User user = new User();
-
         user.setName(userDto.name());
         user.setEducation(userDto.education());
         user.setEmail(userDto.email());
-        user.setPassword(userDto.password());
+        user.setPassword(passwordEncoder.encode(userDto.password())); // encrypt password
         user.setRole(userDto.role());
         user.setBirthDate(userDto.birthDate());
         user.setCity(userDto.city());
@@ -35,10 +36,14 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public UserResponseDataDto update(Long id, UserUpdateDto userUpdateDto) {
+        if(userUpdateDto == null){
+            throw new IllegalArgumentException("User update data is null")
+        }
+
         User user = getUser(id);
         user.setName(userUpdateDto.name());
         user.setEducation(userUpdateDto.education());
-        user.setPassword(userUpdateDto.password());
+        user.setPassword(passwordEncoder.encode(userUpdateDto.password())); // encrypt password
         user.setCity(userUpdateDto.city());
         user.setCity(userUpdateDto.interest());
         userRepository.save(user);

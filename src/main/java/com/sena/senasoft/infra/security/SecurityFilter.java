@@ -1,4 +1,4 @@
-package com.sena.senasoft.infra.config;
+package com.sena.senasoft.infra.security;
 
 import com.sena.senasoft.domain.user.UserRepository;
 import jakarta.servlet.FilterChain;

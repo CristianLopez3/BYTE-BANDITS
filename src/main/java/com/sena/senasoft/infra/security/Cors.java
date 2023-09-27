@@ -1,4 +1,4 @@
-package com.sena.senasoft.infra.config;
+package com.sena.senasoft.infra.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
