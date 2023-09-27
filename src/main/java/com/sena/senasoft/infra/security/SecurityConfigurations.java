@@ -32,8 +32,8 @@ public class SecurityConfigurations {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Le indicamos a Spring el tipo de sesion
                 .and().authorizeRequests()
                 .requestMatchers(HttpMethod.POST, "/login").permitAll()
-                .requestMatchers( "/register/**").permitAll() // Permitir el acceso a la URL "/registro" sin autenticación
-                .requestMatchers("/swagger-ui.html", "/v3/api-docs/**","/swagger-ui/**").permitAll()
+                .requestMatchers(HttpMethod.POST, "/register/**").permitAll() // Permitir el acceso a la URL "/registro" sin autenticación
+               // .requestMatchers("/swagger-ui.html", "/v3/api-docs/**","/swagger-ui/**").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
@@ -55,16 +55,5 @@ public class SecurityConfigurations {
     }
 
 
-    @Bean
-    public CorsFilter corsFilter() {
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("http://127.0.0.1:5500");
-        config.addAllowedOrigin("*"); // Cambia esto a tu URL de origen
-        config.addAllowedMethod("*");
-        config.addAllowedHeader("*");
-        source.registerCorsConfiguration("/**", config);
-        return new CorsFilter(source);
-    }
 
 }

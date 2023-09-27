@@ -23,7 +23,7 @@ public class Register {
      * @param registerData {name, email, password, birthDate, education, rol, devrole}
      * @return
      */
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity<UserResponseDataDto> saveUser(@RequestBody UserRegisterDataDto registerData){
         if(registerData == null){
             throw new IllegalArgumentException("register data is null");

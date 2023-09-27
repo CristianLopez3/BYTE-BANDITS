@@ -12,3 +12,13 @@ spring:
     show-sql: true
 server:
   port: 9999
+  error:
+    include-stacktrace: never
+api:
+  security:
+    secret: ${JWT_SECRET:123456}
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG

@@ -37,7 +37,7 @@ public class UserServiceImpl implements IUserService {
     @Override
     public UserResponseDataDto update(Long id, UserUpdateDto userUpdateDto) {
         if(userUpdateDto == null){
-            throw new IllegalArgumentException("User update data is null")
+            throw new IllegalArgumentException("User update data is null");
         }
 
         User user = getUser(id);
