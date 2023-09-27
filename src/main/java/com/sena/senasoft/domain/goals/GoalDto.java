@@ -10,12 +10,12 @@ public record GoalDto(
 ) {
 
 
-    public GoalDto(Goal goals){
+    public GoalDto(Goal goal){
             this(
-                    goals.getDescription(),
-                    goals.getStart(),
-                    goals.getFinish(),
-                    goals.getUser().getId()
+                    goal.getDescription(),
+                    goal.getStart(),
+                    goal.getFinish(),
+                    goal.getUser().getId()
             );
         }
     }
