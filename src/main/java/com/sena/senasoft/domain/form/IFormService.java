@@ -6,5 +6,14 @@ import java.util.List;
 
 public interface IFormService {
 
+    Form saveForm(FormDto formDto);
+
+    List<Form> getFormList();
+
+    Form getForm(Long id);
+
+    Form updateForm(Long id, Form formDto);
+
+    void deleteForm(Long id);
 
 }
