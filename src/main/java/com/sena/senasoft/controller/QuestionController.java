@@ -14,23 +14,28 @@ public class QuestionController {
     private final IQuestionService questionService;
 
     @PostMapping
-    public ResponseEntity<QuestionDto> saveQuestion (@RequestBody question){
+    public ResponseEntity<Question> saveQuestion (@RequestBody QuestionDto question){
         return ResponseEntity.ok(questionService.saveQuestion(question));
     }
 
     @GetMapping
-    public ResponseEntity <List<QuestionDto>> getQuestionList(){
-        return ResponseEntity.ok(questionService.getQuestionList());
+    public ResponseEntity <List<Question>> getQuestionListByForm(@RequestBody Long form_id){
+        return ResponseEntity.ok(questionService.findQuestionsByForm(form_id));
     }
 
-    @PutMapping
-    public ResponseEntity<QuestionDto> updateQuestion(@RequestBody question){
-        return ResponseEntity.ok(questionService.updateQuestion(question));
+    @PutMapping("/{id}")
+    public ResponseEntity<Question> updateQuestion(
+            @PathVariable Long id,
+            @RequestBody QuestionDto questionDto
+    ){
+        return ResponseEntity.ok(questionService.updateQuestion(id, questionDto));
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity deleteQuestion(@PathVariable Long id){
         questionService.deleteQuestion(id);
         return ResponseEntity.noContent().build();
     }
+
+
 }
