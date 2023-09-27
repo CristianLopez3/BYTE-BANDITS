@@ -19,23 +19,17 @@ public class Form {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 100)
-    private String titulo;
+    private String title;
 
-    @Column(nullable = false, length = 255)
-    private String descripcion;
+    private String description;
 
-    @Column(name = "fecha_inicio")
-    private LocalDate fechaInicio;
 
-    @Column(name = "fecha_fin")
-    private LocalDate fechaFin;
+    private LocalDate start;
+
+    private LocalDate end;
 
     @ManyToOne
     @JoinColumn(name = "creador_id", referencedColumnName = "id")
     private User creador;
 
-    // Agrega aquí las relaciones necesarias con otras entidades, si las tienes.
-
-    // Getters y setters, constructores y otros métodos según sea necesario.
 }
