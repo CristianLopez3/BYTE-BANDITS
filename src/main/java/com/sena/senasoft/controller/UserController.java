@@ -18,15 +18,6 @@ public class UserController {
 
     private final IUserService userService;
 
-    /**
-     * Save a user in the database
-     * @param registerData {name, email, password, birthDate, education, rol, devrole}
-     * @return
-     */
-    @PostMapping
-    public ResponseEntity<UserResponseDataDto> saveUser( @RequestBody UserRegisterDataDto registerData){
-        return ResponseEntity.ok(userService.saveUser(registerData));
-    }
 
     /**
      * @return All users
