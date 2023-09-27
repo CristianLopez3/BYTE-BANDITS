@@ -36,3 +36,128 @@
             </div>
         </section>
     </header>
+    <main>
+    <section id="servicios">
+            <div class="container">
+                <h2>TEMÁTICAS<span> DESTACADAS</span></h2>
+
+                <div class="row">
+                    <article class="col-lg-3 col-md-6">
+                        <div class="card-services">
+                            <div class="header-card">
+                            <h3>DESARROLLO DE SOFTWARE</h3>
+                            </div>
+                            <h5>El Desarrollo de Software,</h5>
+                            <p>es el proceso de crear, diseñar, programar, probar y mantener programas de computadora y sistemas informáticos.</p>
+                        </div>
+                    </article>
+                    <article class="col-lg-3 col-md-6">
+                        <div class="card-services">
+                            <div class="header-card">
+                            <h3>DESARROLLO AGIL</h3>
+                            </div>
+                            <h5>El Desarrollo Ágil,</h5>
+                            <p>es un enfoque de gestión de proyectos de desarrollo de software que se basa en la flexibilidad, la colaboración y la entrega incremental.</p>
+                        </div>
+                    </article>
+                    <article class="col-lg-3 col-md-6">
+                        <div class="card-services">
+                            <div class="header-card">
+                            <h3>INGLÉS</h3>
+                            </div>
+                            <h5>La importancia del inglés</h5>
+                            <p>El inglés desempeña un papel importante en el desarrollo de software. Es un campo en donde la mayoría de recursos y terminología técnica están disponibles en inglés.</p>
+                        </div>
+                    </article>
+                    <article class="col-lg-3 col-md-6">
+                        <div class="card-services">
+                            <div class="header-card">
+                            <h3>MATEMÁTICAS</h3>
+                            </div>
+                            <h5>Importancia de las matemáticas</h5>
+                            <p>Las matemáticas desempeñan un papel fundamental en el desarrollo de software, ya que proporcionan las bases lógicas y algorítmicas necesarias para resolver problemas.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="planes">
+            <div class="container">
+                <h2>¿Ya conoces estos temas?</h2>
+                <div class="row">
+
+                    <article class=" plan">
+                        <div class="accordion" id="accordionExample">
+
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        ¿Que es Software?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                    Se conoce como software, ​ logicial o soporte lógico al sistema formal de un sistema informático, que comprende el conjunto de los componentes lógicos necesarios que hace posible la realización de tareas específicas, en contraposición a los componentes físicos que son llamados hardware.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        ¿Que es un BA?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                    El Business Analyst, es la persona que posee conocimientos técnicos sobre la construcción de sistemas informáticos y al mismo tiempo comprende y está al corriente de las necesidades del usuario que requiere de esos sistemas para realizar su trabajo.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        ¿Que es un QA?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                    El Quality Assurance Engineer, es alguien que prueba productos de software a lo largo de todo el proceso de desarrollo. Este perfil profesional asegura que los productos reúnan altos estándares de calidad antes de ser presentados al público para su uso general.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        ¿Que es un Dev?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                    Un programador es aquella persona que elabora programas de computadora, ​ los profesionales que crean el software se denominan programadores y utilizan lenguajes de programación, dichos lenguajes son similares a idiomas que permitan entenderse con el ordenador y escribir instrucciones que generan nuevos programas.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>

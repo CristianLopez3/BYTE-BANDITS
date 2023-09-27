@@ -14,7 +14,7 @@
                             <a class="nav-link " aria-current="page" href="?b=index&s=Inicio"><i class="fa-solid fa-house"></i>Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="?b=login=Inicio"><i class="fa-solid fa-user"></i>Inicio de Sesión</a>
+                            <a class="nav-link " aria-current="page" href="?b=login=Inicio"><i class="fa-solid fa-user"></i>Inicio de Sesión</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " aria-current="page" href="?b=newAccount&s=Inicio"><i class="fa-solid fa-user-plus"></i>Registrarse</a>

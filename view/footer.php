@@ -1,5 +1,8 @@
 
-        <footer></footer>
+    <footer>
+        <img src="assets/images/logo.png" alt="Logo">
+        <div><p>© BYTE BANDITS - TODOS LOS DERECHOS RESERVADOS - #SENA SOFT 2023</p></div>
+    </footer>
     <!-- Document -->
     <?php echo (isset($$js)) ? $js : "" ?>
     <!-- Font Awesome - Icons -->
