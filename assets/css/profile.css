@@ -29,7 +29,7 @@
 /* User Data */
 
 .container-user-data form{
-    max-width: 800px;
+    width: 400px;
     margin-left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -52,6 +52,26 @@
     text-decoration: none;
     padding: 20px;
     align-items: center;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.container-forums a.container-forum:hover{
+    transition: .3s ;
+    transform: scale(0.9);
+    background-color: var(--color-5);
+    color: var(--color-3);
+    -webkit-transition: .3s ;
+    -moz-transition: .3s ;
+    -ms-transition: .3s ;
+    -o-transition: .3s ;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
 }
 
 a.container-forum .icon-forum, a.container-forum .title-forum{

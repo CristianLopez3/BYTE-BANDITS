@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const containerForums = document.getElementById('container-forums');
 
     // Arreglo provisional, se debe traer los datos desde la Base de datos. 
-    const arrayForos = ["PHP - Fundamentos Básicos", "CSS - Hojas de Estilo en Cascada", "Programación Orientada a Objetos"];
+    const arrayForos = ["PHP - Fundamentos Básicos", "CSS - Hojas de Estilo en Cascada", "Programación Orientada a Objetos", "PHP - Fundamentos Básicos", "CSS - Hojas de Estilo en Cascada", "Programación Orientada a Objetos"];
 
     for (let i = 0; i < arrayForos.length; i++) {
-        // Crear el enlace (etiqueta <a>) con el atributo href="#"
+        
         const linkForum = document.createElement("a");
         linkForum.classList.add("container-forum");
         linkForum.setAttribute("href", "#");
