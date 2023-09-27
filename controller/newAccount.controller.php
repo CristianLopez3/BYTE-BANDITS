@@ -3,7 +3,7 @@
 class newAccountController{
 
     public function Inicio(){
-        $page = "Login - Usuarios";
+        $page = "Registro - Usuarios";
         $style = '
             <link rel="stylesheet" type="text/css" href="assets/css/global.css">
             <link rel="stylesheet" type="text/css" href="assets/css/new-account.css">
