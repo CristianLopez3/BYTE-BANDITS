@@ -14,19 +14,24 @@ public class FormController {
     private final FormServiceImpl formService;
 
     @PostMapping
-    public ResponseEntity<FormResponseDataDto> saveForm (@RequestBody FormResponseDataDto registerDara){
-        return ResponseEntity.ok(formService.saveForm(registerDara));
+    public ResponseEntity<FormDto> saveForm (@RequestBody FormDto formDto){
+        return ResponseEntity.ok(formService.saveForm(formDto));
     }
 
     @GetMapping
-    public ResponseEntity<List<FormListDto>> getFormList(){
+    public ResponseEntity<List<Form>> getFormList(){
         return ResponseEntity.ok(formService.getFormList());
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<FormResponseDataDto> updateForm (@PathVariable Long id, @RequestBody FormUpdateDto updateDto){
-        FormResponseDataDto formResponse = formService.update(id, updateDto);
+    public ResponseEntity<FormDto> updateForm (@PathVariable Long id, @RequestBody FormDto updateForm){
+        FormDto formResponse = formService.update(id, updateDto);
         return ResponseEntity.ok(formResponse);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<FormDto> deleteForm (@PathVariable Long id){
+        formService.deleteForm(id);
+        return ResponseEntity.ok().build();
+    }
 }
