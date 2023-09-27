@@ -5,23 +5,6 @@ const d = document;
 const $formRegister = d.getElementById("register");
 const $formLogin = d.querySelector(".login");
 
-
-// Function for obtain all users
-async function getAllUsers() {
-  try {
-    const users = await get('user');
-    const user = await get('user/1');
-    console.log(user);
-    console.log(users);
-    return users;
-  } catch (error) {
-    throw new Error(`Error fetching users: ${error.message}`);
-  }
-}
-
-const response = getAllUsers();
-console.log(response);
-
 // Manage the form register
 document.addEventListener("submit", async e => {
 
@@ -63,9 +46,53 @@ document.addEventListener("submit", async e => {
     }
     // pull request
   }
+  
+  // Login form 
+  // TODO - implement security module
+  if(e.target == $formLogin){
+    e.preventDefault();
+    try {
 
+      const email = e.target.email_user.value;
+      const password = e.target.password_user.value;
+
+      // Build the body with the data to send
+      const body = {
+        email,
+        password
+      };
+
+      // Make post request
+      const response = await post("user", body);
+      location.reload();
+       location.href = "?b=login&s=Inicio";
+      //location.href = "../view/login/login.php";
+
+
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
 });
+
+
+// Function for obtain all users
+async function getAllUsers() {
+  try {
+    const users = await get('user');
+    const user = await get('user/1');
+    console.log(user);
+    console.log(users);
+    return users;
+  } catch (error) {
+    throw new Error(`Error fetching users: ${error.message}`);
+  }
+}
+
+const response = getAllUsers();
+console.log(response);
+
 
 
 // Llamar a la función para obtener todos los usuarios
