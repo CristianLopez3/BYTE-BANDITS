@@ -30,7 +30,7 @@ public class ResourceServiceImpl implements IResourceService {
 
     @Override
     public List<Resource> getResourceList() {
-        return null;
+        return resourceRepository.findAll();
     }
 
     @Override
@@ -39,6 +39,7 @@ public class ResourceServiceImpl implements IResourceService {
         if (resource.isEmpty()){
             throw new EntityNotFoundException("Resource not found");
         }
+        Resource realResource = resource.get();
         return resource.get();
     }
 

@@ -31,25 +31,26 @@ public class GoalServiceImpl implements IGoalService {
 
     @Override
     public List<Goal> getGoalList() {
-        return null;
+        return goalRepository.findAll();
     }
 
     @Override
     public Goal getGoal(Long id) {
-        Optional<Goal> goals = goalRepository.findById(id);
-        if (goals.isEmpty()) {
+        Optional<Goal> goal = goalRepository.findById(id);
+        if (goal.isEmpty()) {
             throw new EntityNotFoundException("Goal not found");
         }
-        return goals.get();
+        Goal realGoal = goal.get();
+        return goal.get();
     }
 
     @Override
     public Goal updateGoal(Long id, GoalDto goalDto) {
-        Optional<Goal> goals = goalRepository.findById(id);
-        if (goals.isEmpty()) {
+        Optional<Goal> goal = goalRepository.findById(id);
+        if (goal.isEmpty()) {
             throw new EntityNotFoundException("Form not found");
         }
-        Goal realGoal = goals.get();
+        Goal realGoal = goal.get();
         realGoal.setDescription(goalDto.description());
         realGoal.setFinish(goalDto.finish());
         realGoal.setStart(goalDto.start());

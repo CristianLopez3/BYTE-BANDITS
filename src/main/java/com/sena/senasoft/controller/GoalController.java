@@ -37,13 +37,19 @@ public class GoalController {
     public ResponseEntity <List<Goal>> getGoalList(){
         return ResponseEntity.ok(goalService.getGoalList());
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity <Goal> getGoal(@PathVariable Long id){
+        return ResponseEntity.ok(goalService.getGoal(id));
+    }
+
     @PutMapping("/{id}")
-    public ResponseEntity <Goal> updateResource(@PathVariable Long id, @RequestBody GoalDto GoalDto){
-        Goal goalResponse = goalService.updateGoal(id, GoalDto);
+    public ResponseEntity <Goal> updateGoal(@PathVariable Long id, @RequestBody GoalDto goalDto){
+        Goal goalResponse = goalService.updateGoal(id, goalDto);
         return ResponseEntity.ok(goalResponse);
     }
     @DeleteMapping("/{id}")
-    public ResponseEntity deleteResource(@PathVariable Long id){
+    public ResponseEntity deleteGoal(@PathVariable Long id){
         goalService.deleteGoal(id);
         return ResponseEntity.noContent().build();
     }
