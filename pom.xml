@@ -17,7 +17,6 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -71,6 +70,15 @@
 		</dependency>
 
 		<!--JSON WEB TOKEN DEPENDENCIES -->
+
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>4.2.1</version>
+		</dependency>
+
+
+<!--
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-api</artifactId>
@@ -90,7 +98,7 @@
 			<version>0.11.5</version>
 			<scope>runtime</scope>
 		</dependency>
-
+-->
 	</dependencies>
 
 
