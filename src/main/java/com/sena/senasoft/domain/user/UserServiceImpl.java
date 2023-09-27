@@ -27,6 +27,7 @@ public class UserServiceImpl implements IUserService {
         user.setRole(userDto.role());
         user.setBirthDate(userDto.birthDate());
         user.setCity(userDto.city());
+        user.setInterest(userDto.interest());
         userRepository.save(user);
         return new UserResponseDataDto(user);
 
@@ -39,6 +40,7 @@ public class UserServiceImpl implements IUserService {
         user.setEducation(userUpdateDto.education());
         user.setPassword(userUpdateDto.password());
         user.setCity(userUpdateDto.city());
+        user.setCity(userUpdateDto.interest());
         userRepository.save(user);
         return new UserResponseDataDto(user);
     }

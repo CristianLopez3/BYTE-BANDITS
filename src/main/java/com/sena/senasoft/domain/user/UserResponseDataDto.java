@@ -8,6 +8,7 @@ public record UserResponseDataDto(
         String email,
         Role role,
         String education,
+        String interest,
         Date birthDate
 ) {
 
@@ -18,6 +19,7 @@ public record UserResponseDataDto(
                 user.getEmail(),
                 user.getRole(),
                 user.getEducation(),
+                user.getInterest(),
                 user.getBirthDate()
         );
     }

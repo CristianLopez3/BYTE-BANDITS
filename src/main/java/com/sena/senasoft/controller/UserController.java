@@ -18,22 +18,42 @@ public class UserController {
 
     private final IUserService userService;
 
+    /**
+     * Save a user in the database
+     * @param registerData {name, email, password, birthDate, education, rol, devrole}
+     * @return
+     */
     @PostMapping
     public ResponseEntity<UserResponseDataDto> saveUser( @RequestBody UserRegisterDataDto registerData){
         return ResponseEntity.ok(userService.saveUser(registerData));
     }
 
+    /**
+     * @return All users
+     */
     @GetMapping
     public ResponseEntity<List<UserListDto>> getUserList(){
         return ResponseEntity.ok(userService.getUserList());
     }
 
+    /**
+     *
+     * @param id
+     * @return a user
+     */
     @GetMapping("/{id}")
     public ResponseEntity<UserResponseDataDto> getUser(@PathVariable Long id){
         User user = userService.getUser(id);
         return ResponseEntity.ok(new UserResponseDataDto(user));
     }
 
+
+    /**
+     * Update the user data
+     * @param id
+     * @param updatedDto: {name, password, education}
+     * @return
+     */
     @PutMapping("/{id}")
     public ResponseEntity<UserResponseDataDto> updateUser(
             @PathVariable Long id,
@@ -51,4 +71,6 @@ public class UserController {
         userService.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
+
+
 }

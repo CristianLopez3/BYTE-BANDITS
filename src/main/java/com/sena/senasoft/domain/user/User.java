@@ -22,11 +22,11 @@ public class User {
     private Long id;
 
     private String name;
-
     private String email;
     private String password;
     private String education;
     private Date birthDate;
+    private String interest;
     private String city;
 
     @Enumerated(EnumType.STRING)
