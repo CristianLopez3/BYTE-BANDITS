@@ -16,4 +16,6 @@ public interface IFormService {
 
     void deleteForm(Long id);
 
+    List<Form> findFormByCreator(Long id);
+
 }

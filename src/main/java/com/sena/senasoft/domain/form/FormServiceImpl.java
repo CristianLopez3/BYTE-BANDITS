@@ -69,5 +69,10 @@ public class FormServiceImpl implements IFormService {
         formRepository.delete(form.get());
     }
 
+    @Override
+    public List<Form> findFormByCreator(Long id) {
+        return formRepository.findByCreatorId(id);
+    }
+
 
 }
