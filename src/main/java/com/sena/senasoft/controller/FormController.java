@@ -14,7 +14,7 @@ public class FormController {
     private final FormServiceImpl formService;
 
     @PostMapping
-    public ResponseEntity<FormDto> saveForm (@RequestBody FormDto formDto){
+    public ResponseEntity<Form> saveForm (@RequestBody FormDto formDto){
         return ResponseEntity.ok(formService.saveForm(formDto));
     }
     @GetMapping
@@ -22,8 +22,11 @@ public class FormController {
         return ResponseEntity.ok(formService.getFormList());
     }
     @PutMapping("/{id}")
-    public ResponseEntity<FormDto> updateForm (@PathVariable Long id, @RequestBody FormDto updateForm){
-        FormDto formResponse = formService.update(id, updateDto);
+    public ResponseEntity<Form> updateForm (
+            @PathVariable Long id,
+            @RequestBody FormDto updateForm
+    ){
+        Form formResponse = formService.updateForm(id, updateForm);
         return ResponseEntity.ok(formResponse);
     }
 
