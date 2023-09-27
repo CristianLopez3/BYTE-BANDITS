@@ -1,5 +1,7 @@
 package com.sena.senasoft.domain.score;
 
+import com.sena.senasoft.domain.form.Form;
+import com.sena.senasoft.domain.form.FormServiceImpl;
 import com.sena.senasoft.domain.goals.GoalRepository;
 import com.sena.senasoft.domain.user.User;
 import com.sena.senasoft.domain.user.UserServiceImpl;
@@ -18,11 +20,14 @@ public class ScoreServiceImpl implements IScoreService {
      */
     private final ScoreRepository scoreRepository;
     private final UserServiceImpl userService;
+    private final FormServiceImpl formService;
     @Override
     public Score saveScore(ScoreDto scoreDto) {
         User user = userService.getUser(scoreDto.user());
+        Form form = formService.getForm(scoreDto.form());
         Score score = new Score();
         score.setUser(user);
+        score.setForm(form);
         score.setPoints(scoreDto.points());
         return scoreRepository.save(score);
     }
