@@ -3,7 +3,10 @@
 class IndexController{
     public function Inicio(){
         $page = "Home";
-        $style = '<link rel="stylesheet" type="text/css" href="assets/css/global.css">';
+        $style = '
+            <link rel="stylesheet" type="text/css" href="assets/css/global.css">
+            <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+            ';
         $js = '<script src="assets/js/index.js"></script>';
         require_once "view/head.php";
         require_once "view/header.php";
