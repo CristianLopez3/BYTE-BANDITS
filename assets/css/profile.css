@@ -38,6 +38,22 @@
     -o-transform: translateX(-50%);
 }
 
+/* Forums */
+
+.container-forums{
+    background-color: var(--color-1);
+    color: var(--color-6);
+}
+
+.container-forums .container-forum{
+    width: 300px;
+    display: flex;
+    border: 1px solid black;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
 
 
 

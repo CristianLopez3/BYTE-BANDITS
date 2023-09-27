@@ -35,30 +35,17 @@
         <!-- User Data -->
         <div class="container-fluid container-user-data">
             <form class="p-5" action="#" method="post">
-                <h1 class="text-center">Datos del Usuario</h1>
+                <h1 class="text-center mb-5">Datos del Usuario</h1>
+                <div class="form-floating">
+                    <input type="hidden" name="id_user" class="form-control" id="floatingInput" disabled>
+                </div>
                 <div class="form-floating">
                     <input type="text" name="name_user" class="form-control" id="floatingInput" disabled>
                     <label for="floatingInput">Nombre Completo</label>
                 </div>
                 <div class="form-floating mt-3">
-                    <input type="text" name="email_user" class="form-control" id="floatingInput" disabled>
-                    <label for="floatingInput">Direccion de Correo electronico</label>
-                </div>
-                <div class="form-floating mt-3">
-                    <input type="password" name="password_user" class="form-control" id="floatingPassword" disabled>
-                    <label for="floatingPassword">Contraseña</label>
-                </div>
-                <div class="form-floating mt-3">
-                    <input type="hidden" name="rol_user" value="usuario" class="form-control" id="floatingInput" disabled readonly>
-                    <label for="floatingInput">Rol del Usuario</label>
-                </div>
-                <div class="form-floating mt-3">
                     <input type="text" name="city_user" class="form-control" id="floatingInput" disabled>
                     <label for="floatingInput">Ciudad de Residencia</label>
-                </div>
-                <div class="form-floating mt-3">
-                    <input type="date" name="date_user" class="form-control" id="floatingInput" disabled>
-                    <label for="floatingInput">Fecha de Nacimiento</label>
                 </div>
                 <div class="form-floating mt-3">
                     <select class="form-select" name="interest_user" id="floatingSelect" aria-label="Floating label select example" disabled>
@@ -86,5 +73,8 @@
                     <button type="submit" id="registrarmeBtn" class="btn btn-primary d-block mx-auto" onclick="formDisabled()">Registrarme</button>
                 </div>
             </form>
+        </div>
+        <!-- Forums -->
+        <div id="container-forums" class="container-fluid container-forums p-5 d-flex flex-wrap justify-content-center aling-items-center gap-5">
         </div>
     </div>
