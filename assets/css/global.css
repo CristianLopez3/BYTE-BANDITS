@@ -1,0 +1,462 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'alibaba-medium';
+    src: url('assets/fonts/alibaba-sans/Alibaba-Medium.totf'),
+         url('assets/fonts/alibaba-sans/Alibaba-Medium.ttf');
+}
+
+
+:root {
+    --color-1: #006DFF;
+    --color-2: #F4F4F4;
+    --color-3: #FFFFFF; 
+    --color-4: #212529;
+    --color-5: #292C36;  
+    --color-6: #000000; 
+}
+
+a{
+    color: var(--color-3);
+    text-decoration: none;
+}
+
+header {
+    padding-top: 150px;
+    background: var(--color-1);
+}
+
+nav.bg-gym {
+    background-color: var(--color-6);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    top: 0;
+    color: var(--color-3);
+}
+
+nav .navbar-brand img {
+    width: 92px;
+}
+
+nav .navbar-toggler{
+    color: var(--color-3);
+}
+
+nav.bg-gym ul li {
+    margin-top: 5px;
+}
+
+nav.bg-gym ul {
+    margin-left: 8%;
+}
+
+nav.bg-gym ul li a {
+    color: var(--color-3);
+    position: relative;
+    font-size: 20px;
+    margin: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav.bg-gym ul li a::after {
+    width: 0;
+    height: 2px;
+    background: transparent;
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 10px;
+    transition: .4s;
+}
+
+nav.bg-gym ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav.bg-gym ul li a:hover::after {
+    background: var(--primary-color);
+    width: 40%;
+}
+
+
+
+nav.bg-gym ul li.registro a {
+    display: block;
+    margin-left: 150px;
+    padding: 5px;
+    padding-left: 20px !important;
+    padding-right: 40px !important;
+    color: #fff;
+    background: var(--primary-color);
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#navbarNav{
+    justify-content: flex-end !important;
+}
+
+/* Hero */
+
+#hero {
+    padding: 0;
+}
+#hero img{
+    max-width: 100%;
+}
+#carouselHeroIndicators {
+    padding-top: 70px;
+}
+
+#carouselHeroIndicators h3 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#carouselHeroIndicators p {
+    color: #ffffff;
+}
+
+
+#carouselHeroIndicators .carousel-indicators {
+    bottom: -40px;
+    left: 0;
+    justify-content: flex-start;
+    margin-left: 0;
+}
+
+#carouselHeroIndicators .carousel-indicators button {
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    border-top: 0;
+    border-bottom: 0;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+#carouselHeroIndicators .carousel-indicators button.active {
+    background: #ffff;
+}
+
+#hero .cont-foto {
+    position: relative;
+    width: 400px;
+}
+
+#hero .cont-foto img {
+    z-index: 2;
+    position: relative;
+    width: 400px;
+}
+
+#hero .cont-foto::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 40px;
+    background: var(--primary-color);
+    z-index: 1;
+}
+
+#hero .cont-info {
+    padding-left: 60px;
+}
+
+#hero .cont-info h1 {
+    color: #fff;
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+#hero .cont-info h1 span {
+    border-bottom: 12px solid #fff;
+}
+
+#hero .cont-info p {
+    color: #c6c6c6;
+    font-size: var(--fontSize-parrafos);
+    margin-bottom: 60px;
+}
+
+#hero .cont-info .destacada h2 {
+    color: #fff;
+    font-size: var(--fontSize-title);
+}
+
+#hero .cont-info .destacada p {
+    font-size: 14px;
+}
+
+/* SERVICIOS */
+
+#servicios {
+    width: 100%;
+    position: relative;
+    padding: 150px 0 100px;
+    text-align: left;
+    background: var(--color-2);
+}
+
+#servicios h2 {
+    color: var(--color-6);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#servicios h2 span {
+    color: var(--color-1);
+    border-bottom: 2px solid var(--color-1);
+}
+
+#servicios .row {
+    padding-top: 70px;
+}
+
+#servicios .card-services {
+    background: var(--color-2);
+    border-radius: 20px;
+    position: relative;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    text-align: left;
+    transition: .4s;
+    max-width: 290px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    box-shadow: 0px 4px 4px 0px #828282;
+}
+
+#servicios .card-services:hover {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+}
+
+#servicios .card-services .header-card {
+    background: var(--color-1);
+    padding: 40px 0;
+    text-align: center !important;
+    border-radius: 20px 20px 0 0;
+}
+
+.card-services .header-card h3 {
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+#servicios .card-services h5{
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+#servicios .card-services p{
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+/* Planes */
+
+
+#planes {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 100px 0 100px;
+    background-color: var(--color-4);
+}
+
+#planes h2 {
+    color: #ffff;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+#planes p {
+    font-size: 20px;
+    color: #c6c6c6;
+}
+
+#planes .lapso {
+    background: #292c36;
+    margin-top: 50px;
+    padding: 50px 70px;
+    border-radius: 20px;
+    text-align: left;
+}
+
+#planes .lapso ul {
+    border: 0 transparent;
+    margin-bottom: 50px;
+    background: #3f434f;
+    max-width: 220px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+#planes .lapso ul li button {
+    background: transparent;
+    color: #fff;
+    border-radius: 30px;
+    width: 100px;
+    border: 0 transparent;
+}
+
+#planes .lapso ul li button.active {
+    background: var(--color-1);
+}
+
+#planes .lapso p {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#planes .lapso p::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--color-1);
+    border-radius: 10px;
+    right: 0;
+    top: 10px;
+}
+
+#planes .plan {
+    background: transparent;
+    padding-top: 20px;
+}
+
+#planes .plan .accordion {
+    background: transparent;
+}
+
+#planes .plan .accordion-item,
+#planes .plan .accordion-item button {
+    background: transparent;
+}
+
+#planes .plan .accordion-item {
+    border-radius: 20px;
+    margin: 30px;
+    border: 1px solid #fff;
+}
+
+#planes .plan h2 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+#planes .plan .accordion-item button {
+    color: #fff;
+    box-shadow: 0 0 0 transparent;
+    padding: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+#planes .plan .accordion-item button.accordion-button {
+    background: var(--color-1);
+}
+
+#planes .plan .accordion-item button.accordion-button.collapsed {
+    background: transparent;
+}
+
+#planes .plan .accordion-item .accordion-body {
+    color: #fff;
+    font-size: 20px;
+}
+
+/* footer */
+
+footer {
+    background: #292c36;
+    text-align: center;
+    color: #fff;
+}
+
+footer img {
+    width: 220px;
+    padding:20px  30px;
+    background: transparent;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+footer div{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-4);
+    font-size: 20px;
+}
+
+/* Responsive */
+
+@media screen and (min-width:320px) and (max-width:990px) {
+    header nav button.navbar-toggler {
+        background: var(--primary-color);
+    }
+    #carouselHeroIndicators .carousel-indicators{
+        justify-content: center;
+        margin-bottom: 30px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #servicios h2{
+        text-align: center;
+    }
+    nav.bg-gym ul li.login {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    nav.bg-gym ul li.registro a {
+        display: inline-block;
+        margin-left: 0;
+    }
+
+    #hero {
+        text-align: center;
+    }
+
+    #hero .cont-foto {
+        width: 100%;
+    }
+
+    #hero .cont-foto::before {
+        left: 0;
+    }
+
+    #cdestacadas h2::after {
+        width: 25%;
+    }
+}
