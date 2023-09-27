@@ -45,13 +45,18 @@
     color: var(--color-6);
 }
 
-.container-forums .container-forum{
+.container-forums a.container-forum{
     width: 300px;
     display: flex;
-    border: 1px solid black;
+    background: var(--color-3);
+    text-decoration: none;
     padding: 20px;
     align-items: center;
+}
+
+a.container-forum .icon-forum, a.container-forum .title-forum{
     text-align: center;
+    padding: 5px;
 }
 
 

@@ -14,12 +14,14 @@ function formDisabled() {
 document.addEventListener("DOMContentLoaded", function () {
     const containerForums = document.getElementById('container-forums');
 
-    // Arreglo provisional, se dene traer los datos desde la Base de datos. 
+    // Arreglo provisional, se debe traer los datos desde la Base de datos. 
     const arrayForos = ["PHP - Fundamentos Básicos", "CSS - Hojas de Estilo en Cascada", "Programación Orientada a Objetos"];
 
     for (let i = 0; i < arrayForos.length; i++) {
-        const containerForum = document.createElement("div");
-        containerForum.classList.add("container-forum");
+        // Crear el enlace (etiqueta <a>) con el atributo href="#"
+        const linkForum = document.createElement("a");
+        linkForum.classList.add("container-forum");
+        linkForum.setAttribute("href", "#");
 
         const iconForum = document.createElement("div");
         iconForum.classList.add("icon-forum");
@@ -30,9 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         titleForum.textContent = arrayForos[i];
 
-        containerForum.appendChild(iconForum);
-        containerForum.appendChild(titleForum);
+        linkForum.appendChild(iconForum);
+        linkForum.appendChild(titleForum);
 
-        containerForums.appendChild(containerForum);
+        containerForums.appendChild(linkForum);
     }
 });
+
