@@ -12,7 +12,7 @@ public interface IFormService {
 
     Form getForm(Long id);
 
-    Form updateForm(Long id, Form formDto);
+    Form updateForm(Long id, FormDto formDto);
 
     void deleteForm(Long id);
 

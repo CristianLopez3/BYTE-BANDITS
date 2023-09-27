@@ -47,12 +47,27 @@ public class FormServiceImpl implements IFormService {
     }
 
     @Override
-    public Form updateForm(Long id, Form formDto) {
-        return null;
+    public Form updateForm(Long id, FormDto formDto) {
+        Optional<Form> form = formRepository.findById(id);
+        if(form.isEmpty()){
+            throw new EntityNotFoundException("Form not found");
+        }
+        Form realForm = form.get();
+        realForm.setTitle(formDto.title());
+        realForm.setDescription(formDto.description());
+        realForm.setStart(formDto.start());
+        realForm.setEnd(formDto.end());
+        return formRepository.save(realForm);
     }
 
     @Override
     public void deleteForm(Long id) {
-
+        Optional<Form> form = formRepository.findById(id);
+        if(form.isEmpty()){
+            throw new EntityNotFoundException("Form not found");
+        }
+        formRepository.delete(form.get());
     }
+
+
 }
