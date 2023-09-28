@@ -9,7 +9,7 @@
                 <p id="user-name" class="">Name User</p>
             </div>
             <div class="d-flex justify-content-center aling-items-center p-3">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <i class="fa-solid fa-arrow-right-from-bracket" id="logout"></i>
             </div>
         </div>
         <!-- Scrore -->
@@ -34,21 +34,25 @@
         </div>
         <!-- User Data -->
         <div class="container-fluid container-user-data">
-            <form class="p-5" action="#" method="post">
+            <form class="p-5" action="#" method="post" id="updateForm">
                 <h1 class="text-center mb-5">Datos del Usuario</h1>
                 <div class="form-floating">
-                    <input type="hidden" name="id_user" class="form-control" id="floatingInput" disabled>
+                    <input type="hidden" name="id" class="form-control"  disabled>
                 </div>
                 <div class="form-floating">
-                    <input type="text" name="name_user" class="form-control" id="floatingInput" disabled>
+                    <input type="text" name="name" id="name" class="form-control" >
                     <label for="floatingInput">Nombre Completo</label>
                 </div>
                 <div class="form-floating mt-3">
-                    <input type="text" name="city_user" class="form-control" id="floatingInput" disabled>
+                    <input type="text" name="city"  id="city" class="form-control" >
                     <label for="floatingInput">Ciudad de Residencia</label>
                 </div>
                 <div class="form-floating mt-3">
-                    <select class="form-select" name="interest_user" id="floatingSelect" aria-label="Floating label select example" disabled>
+                    <input type="password" name="password"  id="password" class="form-control" >
+                    <label for="password">Password</label>
+                </div>
+                <div class="form-floating mt-3">
+                    <select class="form-select" name="interest" id="interest" aria-label="Floating label select example"    >
                         <option selected disabled>Seleccione sus intereses</option>
                         <option value="QA">Quality Assurance</option>
                         <option value="BA">Business Analyst</option>
@@ -57,8 +61,8 @@
                     <label for="floatingSelect">Carrera de Interes</label>
                 </div>
                 <div class="form-floating mt-3">
-                    <select class="form-select" disabled name="education_user" id="floatingSelect" aria-label="Floating label select example">
-                        <option selected disabled>Seleccione su nivel de educacion actual</option>
+                    <select class="form-select"  name="education" id="education" aria-label="Floating label select example">
+                        <option selected>Seleccione su nivel de educacion actual</option>
                         <option value="bachiller">Bachiller</option>
                         <option value="bachiller-tecnico">Bachiller Tecnico</option>
                         <option value="tecnico">Tecnico</option>
@@ -66,11 +70,10 @@
                         <option value="profesional">Profesional</option>
                         <option value="sin-educacion">Sin nivel educativo</option>
                     </select>
-                    <label for="floatingSelect">Nivel de Educación</label>
+                    <label for="education">Nivel de Educación</label>
                 </div>
-                <div class="d-flex mt-5">
-                    <button type="button" id="editarBtn" class="btn btn-dark d-block mx-auto" onclick="formEnabled()">Editar</button>
-                    <button type="submit" id="registrarmeBtn" class="btn btn-primary d-block mx-auto" onclick="formDisabled()">Registrarme</button>
+                <div class="d-flex mt-3">
+                    <button type="submit" id="editarBtn" class="btn btn-dark d-block mx-auto outline">Editar</button>
                 </div>
             </form>
         </div>
