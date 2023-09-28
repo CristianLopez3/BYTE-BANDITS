@@ -27,6 +27,7 @@ public class FormServiceImpl implements IFormService {
         form.setStart(formDto.start());
         form.setEnd(formDto.end());
         form.setCreator(user);
+        form.setScore(formDto.score());
         return formRepository.save(form);
     }
 

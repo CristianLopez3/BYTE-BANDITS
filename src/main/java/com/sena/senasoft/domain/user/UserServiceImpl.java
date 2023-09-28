@@ -1,6 +1,9 @@
 package com.sena.senasoft.domain.user;
 
 
+import com.sena.senasoft.domain.form.Form;
+import com.sena.senasoft.domain.form.FormDto;
+import com.sena.senasoft.domain.form.FormServiceImpl;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -29,6 +32,7 @@ public class UserServiceImpl implements IUserService {
         user.setBirthDate(userDto.birthDate());
         user.setCity(userDto.city());
         user.setInterest(userDto.interest());
+        user.setScore(userDto.score(form.getScore()));
         userRepository.save(user);
         return new UserResponseDataDto(user);
 

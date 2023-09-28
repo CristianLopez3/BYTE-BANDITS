@@ -34,6 +34,7 @@ public class User implements UserDetails {
     private Date birthDate;
     private String interest;
     private String city;
+    private BigInteger score;
 
     @Enumerated(EnumType.STRING)
     private Role role;

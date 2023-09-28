@@ -2,6 +2,7 @@ package com.sena.senasoft.domain.form;
 
 import lombok.Getter;
 
+import java.math.BigInteger;
 import java.time.LocalDate;
 
 
@@ -10,7 +11,8 @@ public record FormDto (
         String description,
         LocalDate start,
         LocalDate end,
-        Long creator
+        Long creator,
+        BigInteger score
 
         ) {
 
@@ -20,7 +22,8 @@ public record FormDto (
                 form.getDescription(),
                 form.getStart(),
                 form.getEnd(),
-                form.getCreator().getId()
+                form.getCreator().getId(),
+                form.getScore()
         );
     }
 }
