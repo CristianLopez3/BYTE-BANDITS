@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigInteger;
 import java.util.Date;
 
 
@@ -28,6 +29,7 @@ public class User {
     private Date birthDate;
     private String interest;
     private String city;
+    private BigInteger score;
 
     @Enumerated(EnumType.STRING)
     private Role role;

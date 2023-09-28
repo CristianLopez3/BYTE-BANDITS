@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigInteger;
 import java.time.LocalDate;
 
 @Entity
@@ -23,6 +24,7 @@ public class Form {
     private String description;
     private LocalDate start;
     private LocalDate end;
+    private BigInteger score;
 
     @ManyToOne
     @JoinColumn(name = "creator_id", referencedColumnName = "id")
