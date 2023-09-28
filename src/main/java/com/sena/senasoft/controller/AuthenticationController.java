@@ -37,6 +37,7 @@ public class AuthenticationController {
      * @return
      */
     @PostMapping
+    @CrossOrigin(origins = "http://127.0.0.1:5500")
     public ResponseEntity authenticateUser(
             @RequestBody @Valid UserAuthenticationDto dataAuthenticateUser
     ) {
