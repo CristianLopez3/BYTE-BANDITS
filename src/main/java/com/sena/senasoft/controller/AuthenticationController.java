@@ -3,6 +3,7 @@ package com.sena.senasoft.controller;
 
 import com.sena.senasoft.domain.user.User;
 import com.sena.senasoft.domain.user.UserAuthenticationDto;
+import com.sena.senasoft.domain.user.UserRepository;
 import com.sena.senasoft.infra.security.DataJWTToken;
 import com.sena.senasoft.infra.security.TokenService;
 import jakarta.validation.Valid;
@@ -27,7 +28,7 @@ public class AuthenticationController {
 
     private final AuthenticationManager authenticationManager;
 
-
+    private final UserRepository userRepository;
     private final TokenService tokenService;
 
     /**
@@ -41,7 +42,7 @@ public class AuthenticationController {
     public ResponseEntity authenticateUser(
             @RequestBody @Valid UserAuthenticationDto dataAuthenticateUser
     ) {
-
+        User user = userRepository.findUser(dataAuthenticateUser.email()).get();
         Authentication authToken =
                 new UsernamePasswordAuthenticationToken(
                         dataAuthenticateUser.email(),
@@ -50,7 +51,7 @@ public class AuthenticationController {
 
         var authenticateUser = authenticationManager.authenticate(authToken);
         var JWTtoken = tokenService.generateToken((User) authenticateUser.getPrincipal());
-        return ResponseEntity.ok(new DataJWTToken(JWTtoken));
+        return ResponseEntity.ok(new DataJWTToken(JWTtoken, user.getId()));
     }
 
 }
