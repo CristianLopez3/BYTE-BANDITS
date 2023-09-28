@@ -3,7 +3,7 @@
         <a href="?b=login&s=Inicio"><i class="fa-solid fa-arrow-left"></i></a>
     </div>
     <div class="container-login container-fluid d-flex flex-column justify-content-center align-items-center">
-        <form class="p-5" id="register" action="#" method="post" id="registerForm">
+        <form class="p-5" id="registerForm" action="#" method="post">
             <h1 class="text-center">Registro de Usuario</h1>
             <p class="text-center">Bienvenido, ingrese sus credenciales de acceso:</p>
             <div class="form-floating">

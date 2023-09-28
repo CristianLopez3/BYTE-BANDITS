@@ -9,7 +9,7 @@ class newAccountController{
             <link rel="stylesheet" type="text/css" href="assets/css/new-account.css">
             ';
         $js = '
-            <script src="implementation/User.js"></script>
+            <script src="implementation/UserRegister.js"></script>
         ';
         require_once "view/head.php";
         require_once "view/newAccount/new-account.php";
