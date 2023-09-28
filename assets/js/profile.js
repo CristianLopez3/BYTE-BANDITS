@@ -68,21 +68,11 @@ function exitSesion() {
   }
 }
 
-function deleteItem(e) {
-  const alert = confirm("¿Esta seguro de elimnar este "+e+"?");
-  if (alert == true) {
-    // Eliminar Item
-  }
-}
 
 // -----Funcionalidad para mostrar los formularios existentes-----//
-// Obtener el contenedor de la tabla
+
 const table = document.querySelector('#results-forms');
 
-// Obtener las filas de la tabla
-const trs = table.querySelectorAll('table');
-
-// Crear un arreglo vacío para almacenar las comunas
 const comunas = [
   {
     id: 1,
@@ -99,11 +89,11 @@ const comunas = [
     fechaFinal: new Date("2023-09-30"),
   },
 ];
-// Recorrer el arreglo de comunas
+
 for (let i = 0; i < comunas.length; i++) {
-  // Crear una fila para la comuna actual
+
   const tr = document.createElement('tr');
-  // Agregar la comuna a la fila
+
   const tdIdForm = document.createElement('td');
   const tdNameForm = document.createElement('td');
   const tdDesForm = document.createElement('td');
@@ -117,7 +107,7 @@ for (let i = 0; i < comunas.length; i++) {
   tdStartDate.textContent = comunas[i].fechaInicio;
   tdFinishDate.textContent = comunas[i].fechaFinal;
   buttonEdit.innerHTML = '<button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditarFormulario">Editar</button>';
-  buttonDelete.innerHTML = '<button class="btn btn-danger" onclick="deleteItem("Formulario")">Eliminar</button>';
+  buttonDelete.innerHTML = '<button class="btn btn-danger">Eliminar</button>';
   tr.appendChild(tdIdForm);
   tr.appendChild(tdNameForm);
   tr.appendChild(tdDesForm)
@@ -126,8 +116,52 @@ for (let i = 0; i < comunas.length; i++) {
   tr.appendChild(buttonEdit);
   tr.appendChild(buttonDelete);
 
-  // Agregar la fila al tbody
   table.appendChild(tr);
+}
+
+
+
+
+// -----Funcionalidad para mostrar los foros existentes-----//
+
+const tableForum = document.querySelector('#results-forums');
+
+
+// Crear un arreglo vacío para almacenar las comunas
+const forums = [
+  {
+    id: 1,
+    nombre: "Foro de PHP",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut leo vulputate, blandit sem sit amet, lobortis dui. Nulla ac turpis lacus. Integer rhoncus justo pellentesque enim fermentum egestas."
+  },
+  {
+    id: 2,
+    nombre: "Foro de Js",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut leo vulputate, blandit sem sit amet, lobortis dui. Nulla ac turpis lacus. Integer rhoncus justo pellentesque enim fermentum egestas."
+  },
+];
+
+for (let i = 0; i < forums.length; i++) {
+
+  const tr = document.createElement('tr');
+
+  const tdIdForm = document.createElement('td');
+  const tdNameForm = document.createElement('td');
+  const tdDesForm = document.createElement('td');
+  const buttonEditForum = document.createElement('td');
+  const buttonDeleteForum = document.createElement('td');
+  tdIdForm.textContent = forums[i].id;
+  tdNameForm.textContent = forums[i].nombre;
+  tdDesForm.textContent = forums[i].description;
+  buttonEditForum.innerHTML = '<button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-editar-foro">Editar</button>';
+  buttonDeleteForum.innerHTML = '<button class="btn btn-danger">Eliminar</button>';
+  tr.appendChild(tdIdForm);
+  tr.appendChild(tdNameForm);
+  tr.appendChild(tdDesForm);
+  tr.appendChild(buttonEditForum);
+  tr.appendChild(buttonDeleteForum);
+
+  tableForum.appendChild(tr);
 }
 
 

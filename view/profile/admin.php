@@ -50,7 +50,7 @@
                         </div>
                         <div class="d-flex mt-5">
                             <button type="button" id="editarBtn" class="btn btn-dark d-block mx-auto" onclick="formEnabled()">Editar</button>
-                            <button type="submit" id="registrarmeBtn" class="btn btn-primary d-block mx-auto" onclick="formDisabled()">Registrarme</button>
+                            <button type="submit" id="registrarmeBtn" class="btn btn-primary d-block mx-auto" onclick="formDisabled()">Guardar</button>
                         </div>
                     </form>
                 </div>
@@ -189,6 +189,78 @@
             </div>
         </div>
         <div class='profile-adm container-right' id='container-right3'>
-            hola 3
+            <div class="container">
+                <h1 class="text-center mt-5">Listado de Foros</h1>
+                <button class="btn btn-primary mt-4 mb-4 float-left" data-bs-toggle="modal" data-bs-target="#modal-agregar-foro">Agregar foro</button>
+
+                <table class=" table tableForum table-forms">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="results-forums"></tbody>
+                </table>
+
+                <!-- Ventana para agregar foro -->
+                <div class="modal fade" id="modal-agregar-foro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Agregar foro</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="#">
+                                    <div class="mb-3">
+                                        <label for="nombreFormulario" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="nombreFormulario" name="title" placeholder="Ingrese el nombre del formulario">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="descripcionFormulario" class="form-label">Descripción</label>
+                                        <input type="text" class="form-control" id="descripcionFormulario" name="description" placeholder="Ingrese la descripción del formulario">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ventana para editar Foro -->
+                <div class="modal fade" id="modal-editar-foro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Editar foro</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="#">
+                                    <div class="mb-3">
+                                        <label for="nombreFormulario" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="nombreFormulario" name="title" placeholder="Ingrese el nombre del formulario">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="descripcionFormulario" class="form-label">Descripción</label>
+                                        <input type="text" class="form-control" id="descripcionFormulario" name="description" placeholder="Ingrese la descripción del formulario">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
