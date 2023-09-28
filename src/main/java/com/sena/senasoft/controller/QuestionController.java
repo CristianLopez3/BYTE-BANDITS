@@ -2,6 +2,7 @@ package com.sena.senasoft.controller;
 
 import com.sena.senasoft.domain.form.FormDto;
 import com.sena.senasoft.domain.question.*;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/question")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearer-key")
 public class QuestionController {
 
     /**

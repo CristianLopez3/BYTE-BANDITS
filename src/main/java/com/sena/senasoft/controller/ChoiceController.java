@@ -3,6 +3,7 @@ package com.sena.senasoft.controller;
 import com.sena.senasoft.domain.choice.Choice;
 import com.sena.senasoft.domain.choice.ChoiceDto;
 import com.sena.senasoft.domain.choice.IChoiceService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/choices")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearer-key")
 public class ChoiceController {
 
     /**

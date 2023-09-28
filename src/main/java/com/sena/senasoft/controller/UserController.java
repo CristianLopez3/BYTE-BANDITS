@@ -2,6 +2,8 @@ package com.sena.senasoft.controller;
 
 
 import com.sena.senasoft.domain.user.*;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.web.PageableDefault;
@@ -14,25 +16,28 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
-@CrossOrigin(origins = {"*"})
+@SecurityRequirement(name = "bearer-key")
 public class UserController {
 
     private final IUserService userService;
 
 
-    /**
-     * @return All users
-     */
     @GetMapping
+    @Operation(
+            summary = "Get all users",
+            description = "",
+            tags = {"Consult", "POST"}
+    )
     public ResponseEntity<List<UserListDto>> getUserList(){
         return ResponseEntity.ok(userService.getUserList());
     }
 
-    /**
-     *
-     * @param id
-     * @return a user
-     */
+
+    @Operation(
+            summary = "Create a user",
+            description = "",
+            tags = {"POST"}
+    )
     @GetMapping("/{id}")
     public ResponseEntity<UserResponseDataDto> getUser(@PathVariable Long id){
         User user = userService.getUser(id);
@@ -40,12 +45,12 @@ public class UserController {
     }
 
 
-    /**
-     * Update the user data
-     * @param id
-     * @param updatedDto: {name, password, education}
-     * @return
-     */
+
+    @Operation(
+            summary = "Update a user",
+            description = "",
+            tags = {"PUT"}
+    )
     @PutMapping("/{id}")
     public ResponseEntity<UserResponseDataDto> updateUser(
             @PathVariable Long id,
@@ -57,6 +62,11 @@ public class UserController {
 
 
     @DeleteMapping("/{id}")
+    @Operation(
+            summary = "Delete a user",
+            description = "",
+            tags = {"DELETE"}
+    )
     public ResponseEntity deleteUser(
             @PathVariable Long id
     ){

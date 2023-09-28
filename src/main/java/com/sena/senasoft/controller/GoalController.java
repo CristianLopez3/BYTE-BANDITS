@@ -5,6 +5,7 @@ import com.sena.senasoft.domain.goals.GoalDto;
 import com.sena.senasoft.domain.goals.IGoalService;
 import com.sena.senasoft.domain.resource.Resource;
 import com.sena.senasoft.domain.resource.ResourceDto;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/goal")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearer-key")
 public class GoalController {
     /**
      * Dependency injection

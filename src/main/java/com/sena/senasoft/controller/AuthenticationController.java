@@ -6,6 +6,7 @@ import com.sena.senasoft.domain.user.UserAuthenticationDto;
 import com.sena.senasoft.domain.user.UserRepository;
 import com.sena.senasoft.infra.security.DataJWTToken;
 import com.sena.senasoft.infra.security.TokenService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,13 +18,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/login")
 @RequiredArgsConstructor
-/**
- *
- *
-@Tag(name = "Autenticacion",
-        description = "obtiene el token para el usuario asignado que da acceso al resto de endpoint")
-@CrossOrigin(origins = "*")
-*/
+@Tag(name = "Authentication",
+        description = "Retrieves the token for the assigned user, granting access to the remaining endpoints.")
 public class AuthenticationController {
 
     private final AuthenticationManager authenticationManager;
