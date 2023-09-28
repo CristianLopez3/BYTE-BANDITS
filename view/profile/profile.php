@@ -9,7 +9,7 @@
                 <p id="user-name" class="">Name User</p>
             </div>
             <div class="d-flex justify-content-center aling-items-center p-3">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <i class="fa-solid fa-arrow-right-from-bracket" id="logout"></i><
             </div>
         </div>
         <!-- Scrore -->

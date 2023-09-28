@@ -34,4 +34,5 @@
     <!-- FAVICON -->
     <link href="assets/img/favicon.png" rel="shortcut icon" />
     <script src="assets/plugins/nprogress/nprogress.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>

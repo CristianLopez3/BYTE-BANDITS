@@ -113,6 +113,9 @@ nav.bg-gym ul li.registro a {
     justify-content: flex-end !important;
 }
 
+#logout:hover{
+    cursor: pointer;
+}
 /* Hero */
 
 #hero {
