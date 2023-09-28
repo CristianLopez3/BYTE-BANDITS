@@ -4,6 +4,7 @@ package com.sena.senasoft.controller;
 import com.sena.senasoft.domain.user.IUserService;
 import com.sena.senasoft.domain.user.UserRegisterDataDto;
 import com.sena.senasoft.domain.user.UserResponseDataDto;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,11 +20,12 @@ public class Register {
 
     private final IUserService userService;
 
-    /**
-     * Save a user in the database
-     * @param registerData {name, email, password, birthDate, education, rol, devrole}
-     * @return
-     */
+
+    @Operation(
+            summary = "Save a user in the database",
+            description = "",
+            tags = {"POST"}
+    )
     @PostMapping("/")
     public ResponseEntity<UserResponseDataDto> saveUser(@RequestBody @Valid UserRegisterDataDto registerData){
         if(registerData == null){

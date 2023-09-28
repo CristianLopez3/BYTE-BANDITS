@@ -6,6 +6,8 @@ import com.sena.senasoft.domain.user.UserAuthenticationDto;
 import com.sena.senasoft.domain.user.UserRepository;
 import com.sena.senasoft.infra.security.DataJWTToken;
 import com.sena.senasoft.infra.security.TokenService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -27,12 +29,15 @@ public class AuthenticationController {
     private final UserRepository userRepository;
     private final TokenService tokenService;
 
-    /**
-     * This method allows the user go to authenticate in the API
-     * with his user and password
-     * @param dataAuthenticateUser
-     * @return
-     */
+
+    @Operation(
+            summary = "generated jwt token",
+            description = "This method allows the user go to authenticate in the API with his user and password",
+            responses = {
+                    @ApiResponse ( description = "Success", responseCode = "200"),
+                    @ApiResponse ( description = "Invalid token", responseCode = "403")
+            }
+    )
     @PostMapping("/")
     public ResponseEntity authenticateUser(
             @RequestBody @Valid UserAuthenticationDto dataAuthenticateUser

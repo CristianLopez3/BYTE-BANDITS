@@ -28,7 +28,7 @@ public class UserController {
     @Operation(
             summary = "Get all users",
             description = "",
-            tags = {"Consult", "POST"}
+            tags = {"Consult", "GET"}
     )
     public ResponseEntity<List<UserListDto>> getUserList(){
         return ResponseEntity.ok(userService.getUserList());
@@ -38,7 +38,7 @@ public class UserController {
     @Operation(
             summary = "Create a user",
             description = "",
-            tags = {"POST"}
+            tags = {"GET"}
     )
     @GetMapping("/{id}")
     public ResponseEntity<UserResponseDataDto> getUser(@PathVariable Long id){
