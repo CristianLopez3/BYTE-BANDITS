@@ -15,6 +15,7 @@ class profileController{
     }
 
     public function admin(){
+        $page = "Admin Dashboard";
         $js = "<script src='assets/js/profile.js'></script>";  
         $style = "<link rel='stylesheet' type='text/css' href='assets/css/global.css'>
         <link rel='stylesheet' type='text/css' href='assets/css/profile-admin.css'>";

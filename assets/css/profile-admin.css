@@ -44,6 +44,7 @@
 .left{
     background-color: var(--color-4);
     width: 100%;
+    height: 100%;
 }
 
 .profile-adm-btn, .user-data-menu{
@@ -68,6 +69,17 @@
     -moz-transition: .5s ;
     -ms-transition: .5s ;
     -o-transition: .5s ;
+}
+
+/* Container from the container in the righ */
+.right-column{
+    height: 80vh;
+}
+
+/* Container Right  */
+
+#container-right i{
+    font-size: 100px;
 }
 
 #container-right2 ,#container-right3{

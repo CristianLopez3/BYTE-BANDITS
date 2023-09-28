@@ -57,3 +57,10 @@ profileAdmBtn.forEach((e, i) => {
   });
 });
   
+
+function exitSesion(){
+  const alert = confirm("¿Esta seguro de cerrar sesón?");
+  if(alert == true){
+    // Cerrar Sesión
+  } 
+}

@@ -15,6 +15,7 @@
                     </div>
                     <form class="p-5" id="register" action="#" method="post">
                         <h1 class="text-center mb-4">Datos de Usuario</h1>
+                        <!-- caja de Texto para el Id -->
                         <div class="form-floating">
                             <input disabled type="hidden" name="id_user" class="form-control" id="name" placeholder="name@example.com">
                         </div>
@@ -23,24 +24,8 @@
                             <label for="floatingInput">Nombre Completo</label>
                         </div>
                         <div class="form-floating">
-                            <input disabled type="text" name="email_user" class="form-control" id="email" placeholder="name@example.com">
-                            <label for="floatingInput">Direccion de Correo electronico</label>
-                        </div>
-                        <div class="form-floating">
-                            <input disabled type="password" name="password_user" class="form-control" id="password" placeholder="Contraseña">
-                            <label for="floatingPassword">Contraseña</label>
-                        </div>
-                        <div class="form-floating">
-                            <input disabled type="hidden" name="rol_user" value="ROLE_STUDENT" class="form-role" id="floatingInput" placeholder="name@example.com" readonly>
-                            <label for="floatingInput">Rol del Usuario</label>
-                        </div>
-                        <div class="form-floating">
                             <input disabled type="text" name="city_user" class="form-control" id="city" placeholder="name@example.com">
                             <label for="floatingInput">Ciudad de Residencia</label>
-                        </div>
-                        <div class="form-floating">
-                            <input disabled type="date" name="date_user" class="form-control" id="date" placeholder="name@example.com">
-                            <label for="floatingInput">Fecha de Nacimiento</label>
                         </div>
                         <div class="form-floating">
                             <select disabled class="form-select" name="interest_user" id="interest" aria-label="Floating label select example">
@@ -73,25 +58,30 @@
         </div>
         <div class="d-flex justify-content-end me-5">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#profileMenuModal">
-                Mi cuenta
+                Datos de Usuario
+            </button>
+        </div>
+        <div class="d-flex justify-content-end me-5">
+            <button type="button" class="btn btn-danger" onclick="exitSesion()">
+                Cerrar Sesion
             </button>
         </div>
     </div>
 </div>
 <div class="container-columns row">
     <div class="container-left col-2">
-        <div class="left">
+        <div class="left pb-5">
             <div class="user-data-menu">
                 <p><i class="fa-solid fa-circle-user"></i></p>
                 <p>User Name</p>
             </div>
             <button class="profile-adm-btn">
                 <p><i class="fa-solid fa-house-user"></i></p>
-                <p>Inicio</p>
+                <p>Bienvenida</p>
             </button>
             <button class="profile-adm-btn">
                 <p><i class="fa-solid fa-user-pen"></i></p>
-                <p style="white-space: nowrap">Datos del usuario</p>
+                <p style="white-space: nowrap">Informancion de </p>
             </button>
             <button class='profile-adm-btn'>
                 <p><i class='fa-solid fa-users'></i></p>
@@ -100,9 +90,12 @@
 
         </div>
     </div>
-    <div class="container-right col">
-        <div class="profile-adm welcome" id="container-right">
-            hola 1
+    <div class="container-right right-column col">
+        <div class="profile-adm welcome p-5" id="container-right">
+            <div class="container text-center">
+                <h1 class="text-center mt-5">Bienvenido al dashboard</h1>
+                <p class="pt-5"><i class="fa-solid fa-door-open"></i></p>    
+            </div>
         </div>
         <div class="profile-adm container-right user" id="container-right2">
             hola 2
