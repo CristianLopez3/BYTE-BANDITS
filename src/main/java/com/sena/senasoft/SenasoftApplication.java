@@ -18,7 +18,10 @@ public class SenasoftApplication {
 		return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(org.springframework.web.servlet.config.annotation.CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("*");
+                registry.addMapping("/**")
+						.allowedOrigins("*")
+						.allowedHeaders("*")
+				;
             }
         };
 	}

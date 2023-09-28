@@ -31,9 +31,9 @@ public class SecurityConfigurations {
                 .csrf().disable().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Le indicamos a Spring el tipo de sesion
                 .and().authorizeRequests()
-                .requestMatchers(HttpMethod.POST, "/login").permitAll()
-                .requestMatchers(HttpMethod.POST, "/register/**").permitAll() // Permitir el acceso a la URL "/registro" sin autenticación
-               // .requestMatchers("/swagger-ui.html", "/v3/api-docs/**","/swagger-ui/**").permitAll()
+                .requestMatchers( "/login/**").permitAll()
+                .requestMatchers("/register/**").permitAll() // Permitir el acceso a la URL "/registro" sin autenticación
+                .requestMatchers("/swagger-ui.html", "/v3/api-docs/**","/swagger-ui/**").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
