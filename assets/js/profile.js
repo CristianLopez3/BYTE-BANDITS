@@ -106,8 +106,8 @@ for (let i = 0; i < comunas.length; i++) {
   tdDesForm.textContent = comunas[i].description;
   tdStartDate.textContent = comunas[i].fechaInicio;
   tdFinishDate.textContent = comunas[i].fechaFinal;
-  buttonEdit.innerHTML = '<button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditarFormulario">Editar</button>';
-  buttonDelete.innerHTML = '<button class="btn btn-danger">Eliminar</button>';
+  buttonEdit.innerHTML = '<button class="btn buttonEdit" data-bs-toggle="modal" data-bs-target="#modalEditarFormulario">Editar</button>';
+  buttonDelete.innerHTML = '<button class="btn buttonDelete">Eliminar</button>';
   tr.appendChild(tdIdForm);
   tr.appendChild(tdNameForm);
   tr.appendChild(tdDesForm)
@@ -153,8 +153,8 @@ for (let i = 0; i < forums.length; i++) {
   tdIdForm.textContent = forums[i].id;
   tdNameForm.textContent = forums[i].nombre;
   tdDesForm.textContent = forums[i].description;
-  buttonEditForum.innerHTML = '<button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-editar-foro">Editar</button>';
-  buttonDeleteForum.innerHTML = '<button class="btn btn-danger">Eliminar</button>';
+  buttonEditForum.innerHTML = '<button class="btn buttonEdit" data-bs-toggle="modal" data-bs-target="#modal-editar-foro">Editar</button>';
+  buttonDeleteForum.innerHTML = '<button class="btn buttonDelete">Eliminar</button>';
   tr.appendChild(tdIdForm);
   tr.appendChild(tdNameForm);
   tr.appendChild(tdDesForm);

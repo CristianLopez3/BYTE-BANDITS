@@ -57,12 +57,12 @@
             </div>
         </div>
         <div class="d-flex justify-content-end me-5">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#profileMenuModal">
+            <button type="button" class="btn buttonEdit" data-bs-toggle="modal" data-bs-target="#profileMenuModal">
                 Datos de Usuario
             </button>
         </div>
         <div class="d-flex justify-content-end me-5">
-            <button type="button" class="btn btn-danger" onclick="exitSesion()">
+            <button type="button" class="btn buttonDelete" onclick="exitSesion()">
                 Cerrar Sesion
             </button>
         </div>
@@ -100,7 +100,7 @@
         <div class="profile-adm container-right user" id="container-right2">
             <div class="container">
                 <h1 class="text-center mt-5">Listado de Formularios</h1>
-                <button class="btn btn-primary mt-4 mb-4 float-left" data-bs-toggle="modal" data-bs-target="#modalAgregarFormulario">Agregar formulario</button>
+                <button class="btn buttonDelete mt-4 mb-4 float-left" data-bs-toggle="modal" data-bs-target="#modalAgregarFormulario">Agregar formulario</button>
 
                 <table class="table table-forms">
                     <thead>
@@ -191,7 +191,7 @@
         <div class='profile-adm container-right' id='container-right3'>
             <div class="container">
                 <h1 class="text-center mt-5">Listado de Foros</h1>
-                <button class="btn btn-primary mt-4 mb-4 float-left" data-bs-toggle="modal" data-bs-target="#modal-agregar-foro">Agregar foro</button>
+                <button class="btn buttonDelete mt-4 mb-4 float-left" data-bs-toggle="modal" data-bs-target="#modal-agregar-foro">Agregar foro</button>
 
                 <table class=" table tableForum table-forms">
                     <thead>
