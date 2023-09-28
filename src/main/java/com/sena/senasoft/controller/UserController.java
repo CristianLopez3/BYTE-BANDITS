@@ -4,6 +4,7 @@ package com.sena.senasoft.controller;
 import com.sena.senasoft.domain.user.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.web.PageableDefault;
@@ -17,6 +18,7 @@ import java.util.List;
 @RequestMapping("/user")
 @RequiredArgsConstructor
 @SecurityRequirement(name = "bearer-key")
+@Tag(name = "User", description = "User methods {GET ALL, GET, PUT, DELETE")
 public class UserController {
 
     private final IUserService userService;

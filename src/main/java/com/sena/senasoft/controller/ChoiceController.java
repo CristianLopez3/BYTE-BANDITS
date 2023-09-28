@@ -3,7 +3,9 @@ package com.sena.senasoft.controller;
 import com.sena.senasoft.domain.choice.Choice;
 import com.sena.senasoft.domain.choice.ChoiceDto;
 import com.sena.senasoft.domain.choice.IChoiceService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +16,8 @@ import java.util.List;
 @RequestMapping("/choices")
 @RequiredArgsConstructor
 @SecurityRequirement(name = "bearer-key")
+@Tag(name = "Choice",
+    description = "Operations about choices")
 public class ChoiceController {
 
     /**
@@ -21,26 +25,29 @@ public class ChoiceController {
      */
     private final IChoiceService choiceService;
 
-    /**
-     * Save a choice in the database with its respective question
-     * @param choiceDto - json body
-     * @return
-     */
+    @Operation(
+            summary = "Create a new choice",
+            description = "Create a new choice"
+    )
     @PostMapping
     public ResponseEntity <Choice> saveChoice(@RequestBody ChoiceDto choiceDto){
         return ResponseEntity.ok(choiceService.saveChoice(choiceDto));
     }
 
-    /**
-     * This method call all choices in the database to make a analysis of the
-     * constant choices and make more decisions about the content of the system
-     * @return All choice
-     */
+
+    @Operation(
+            summary = "Get all choices",
+            description = "Get all choices"
+    )
     @GetMapping
     public ResponseEntity<List<Choice>> getChoiceList(){
         return ResponseEntity.ok(choiceService.getChoiceList());
     }
 
+    @Operation(
+            summary = "Get a choice",
+            description = "Get a choice"
+    )
     @PutMapping("/{id}")
     public ResponseEntity<Choice> updateChoice(
             @PathVariable Long id,
@@ -50,6 +57,10 @@ public class ChoiceController {
         return ResponseEntity.ok(choiceResponse);
     }
 
+    @Operation(
+            summary = "Delete a choice",
+            description = "Delete a choice"
+    )
     @DeleteMapping("/{id}")
     public ResponseEntity deleteChoice(@PathVariable Long id){
         choiceService.deleteChoice(id);
