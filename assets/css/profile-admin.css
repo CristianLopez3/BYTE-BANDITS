@@ -1,0 +1,77 @@
+.container-dasboard{
+    box-shadow: 0px 3px 10px var(--color-6);
+}
+
+.title-dashboard{
+    background-color: var(--color-2);
+    padding: 10px;
+}
+
+.title-dashboard h1{
+    font-size: 20px;
+}
+
+.title-dashboard img{
+    width: 70px;
+}
+
+.cont-cuenta{
+    height: 40%;
+}
+
+.container-menu-profile{
+    background-color: var(--color-2);
+    top: 105px;
+    width: 300px;
+}
+
+.container-menu-profile a, .container-menu-profile p{
+    margin-top: 10px;
+}
+
+.container-menu-profile a button, .container-menu-profile p button{
+    width: 100%;
+}
+
+.container-mi-cuenta form div{
+    margin: 10px 0px;
+} 
+
+.welcome {
+    display: block;
+}
+
+.left{
+    background-color: var(--color-4);
+    width: 100%;
+}
+
+.profile-adm-btn, .user-data-menu{
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    color: var(--color-3);
+    gap: 20px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.user-data-menu{
+    background-color: var(--color-1);
+}
+
+.profile-adm-btn:hover{
+    transition: .5s ;
+    background-color: var(--color-5);
+    -webkit-transition: .5s ;
+    -moz-transition: .5s ;
+    -ms-transition: .5s ;
+    -o-transition: .5s ;
+}
+
+#container-right2 ,#container-right3{
+    display: none;
+}
+
+

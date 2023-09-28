@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const arrayForos = ["PHP - Fundamentos Básicos", "CSS - Hojas de Estilo en Cascada", "Programación Orientada a Objetos", "PHP - Fundamentos Básicos", "CSS - Hojas de Estilo en Cascada", "Programación Orientada a Objetos"];
 
     for (let i = 0; i < arrayForos.length; i++) {
-        
+
         const linkForum = document.createElement("a");
         linkForum.classList.add("container-forum");
         linkForum.setAttribute("href", "#");
@@ -39,3 +39,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
+// Obtén los elementos del contenedor y los botones
+const container0 = document.getElementById("container-right");
+const container1 = document.getElementById("container-right2");
+const container2 = document.getElementById("container-right3");
+
+const profileAdmContainer = document.querySelectorAll(".profile-adm");
+const profileAdmBtn = document.querySelectorAll(".profile-adm-btn");
+
+profileAdmBtn.forEach((e, i) => {
+  e.addEventListener("click", () => {
+    profileAdmContainer.forEach((e) => {
+      e.style.setProperty("display", "none");
+    });
+    profileAdmContainer[i].style.setProperty("display", "block");
+  });
+});
+  
