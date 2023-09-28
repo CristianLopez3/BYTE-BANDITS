@@ -34,7 +34,7 @@
         </div>
         <!-- User Data -->
         <div class="container-fluid container-user-data">
-            <form class="p-5" action="#" method="post">
+            <form class="p-5" action="#" method="post" id="update">
                 <h1 class="text-center mb-5">Datos del Usuario</h1>
                 <div class="form-floating">
                     <input type="hidden" name="id_user" class="form-control" id="floatingInput" disabled>

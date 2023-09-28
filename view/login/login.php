@@ -3,7 +3,7 @@
         <a href="?b=index&s=Inicio"><i class="fa-solid fa-arrow-left"></i></a>
     </div>
     <div class="container-login container-fluid d-flex flex-column justify-content-center align-items-center">
-        <form class="p-5" action="#" method="post">
+        <form class="p-5" action="#" id="login" method="post">
             <h1 class="text-center">Inicio de Sesión</h1>
             <p class="text-center">Bienvenido, ingrese sus credenciales de acceso:</p>
             <div class="form-floating">

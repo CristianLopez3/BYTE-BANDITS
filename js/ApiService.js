@@ -17,6 +17,7 @@
           ...commonHeaders,
           ...options.headers,
         },
+        mode: "cors",
         ...options,
       });
       return handleResponse(response);

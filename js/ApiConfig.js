@@ -3,7 +3,8 @@ export const apiUrl  = "http://localhost:9999";
 
 // Header
 export const commonHeaders = {
-  'Content-Type': 'application/json'
+  'Content-Type': 'application/json', 
+  'access-control-allow-origin': "*"
 };
 
 
