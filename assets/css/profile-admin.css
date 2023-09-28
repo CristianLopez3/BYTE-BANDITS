@@ -77,6 +77,9 @@
 }
 
 /* Container Right  */
+#container-right h1{
+    font-size: 60px;
+}
 
 #container-right i{
     font-size: 100px;
@@ -86,4 +89,14 @@
     display: none;
 }
 
+
+table.table-forms {
+    max-width: 1000px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
 

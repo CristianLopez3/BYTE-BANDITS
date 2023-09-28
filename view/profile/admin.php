@@ -81,24 +81,112 @@
             </button>
             <button class="profile-adm-btn">
                 <p><i class="fa-solid fa-user-pen"></i></p>
-                <p style="white-space: nowrap">Informancion de </p>
+                <p style="white-space: nowrap">Formularios</p>
             </button>
             <button class='profile-adm-btn'>
                 <p><i class='fa-solid fa-users'></i></p>
-                <p>Proveedores</p>
+                <p>Foros</p>
             </button>
 
         </div>
     </div>
     <div class="container-right right-column col">
         <div class="profile-adm welcome p-5" id="container-right">
-            <div class="container text-center">
-                <h1 class="text-center mt-5">Bienvenido al dashboard</h1>
-                <p class="pt-5"><i class="fa-solid fa-door-open"></i></p>    
+            <div class="container text-center overflow-y-auto">
+                <h1 class="text-center mt-5">Bienvenido al dashboard de Administracion</h1>
+                <p class="pt-5"><i class="fa-solid fa-door-open"></i></p>
             </div>
         </div>
         <div class="profile-adm container-right user" id="container-right2">
-            hola 2
+            <div class="container">
+                <h1 class="text-center mt-5">Listado de Formularios</h1>
+                <button class="btn btn-primary mt-4 mb-4 float-left" data-bs-toggle="modal" data-bs-target="#modalAgregarFormulario">Agregar formulario</button>
+
+                <table class="table table-forms">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Fecha de inicio</th>
+                            <th>Fecha final</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="results-forms"></tbody>
+                </table>
+                <!-- Ventana emergente para editar formulario -->
+                <div class="modal fade" id="modalEditarFormulario" tabindex="-1" aria-labelledby="modalEditarFormularioLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalEditarFormularioLabel">Editar formulario</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="#">
+                                    <!-- Campo para id de formulario -->
+                                    <div class="mb-3">
+                                        <input type="hidden" class="form-control" id="nombreFormulario" name="title" placeholder="Ingrese el nombre del formulario">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="nombreFormulario" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="nombreFormulario" name="title" placeholder="Ingrese el nombre del formulario">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="nombreFormulario" class="form-label">Fecha de Inicio</label>
+                                        <input type="date" class="form-control" id="nombreFormulario" name="start" placeholder="Ingrese el nombre del formulario">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="nombreFormulario" class="form-label">Fecha Final</label>
+                                        <input type="date" class="form-control" id="nombreFormulario" name="finish">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ventana para agregar formulario -->
+                <div class="modal fade" id="modalAgregarFormulario" tabindex="-1" aria-labelledby="modalAgregarFormularioLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalAgregarFormularioLabel">Agregar formulario</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="#">
+                                    <div class="mb-3">
+                                        <label for="nombreFormulario" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="nombreFormulario" name="title" placeholder="Ingrese el nombre del formulario">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="nombreFormulario" class="form-label">Descripción</label>
+                                        <input type="text" class="form-control" id="nombreFormulario" name="description" placeholder="Ingrese el nombre del formulario">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="fechaInicio" class="form-label">Fecha de inicio</label>
+                                        <input type="date" class="form-control" name="start" id="fechaInicio">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="fechaFinal" class="form-label">Fecha final</label>
+                                        <input type="date" class="form-control" id="fechaFinal" name="finish">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class='profile-adm container-right' id='container-right3'>
             hola 3
