@@ -9,7 +9,7 @@ class profileController{
             <link rel='stylesheet' type='text/css' href='assets/css/profile.css'>
         ";
         $js = "<script src='assets/js/profile.js'></script>
-                <script src='implementation/User.js'></script>";
+                <script src='./implementation/Logout.js'></script>";
         require_once "view/head.php";
         require_once "view/profile/profile.php";
         require_once "view/footer.php";

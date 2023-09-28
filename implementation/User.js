@@ -1,3 +1,4 @@
+
 document.getElementById('loginForm').addEventListener('submit', function (e) {
   e.preventDefault();
   const email = document.getElementById('email').value;
@@ -68,8 +69,3 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
 
 // Button to logout of system
 
-document.getElementById('logout').addEventListener("click", async function (e) {
-  localStorage.clear(); // clear the user id and token
-  // Re-location user in the login
-  window.location.href = '?b=login'; // Cambia la URL según tu aplicación
-})
