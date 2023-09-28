@@ -61,7 +61,6 @@ public class FormController {
         return ResponseEntity.ok().build();
     }
 
-
     @GetMapping("/{id}")
     public ResponseEntity<List<Form>> getFormListByCreator(@PathVariable Long id){
         return ResponseEntity.ok(formService.findFormByCreator(id));
