@@ -4,6 +4,7 @@ package com.sena.senasoft.controller;
 import com.sena.senasoft.domain.user.IUserService;
 import com.sena.senasoft.domain.user.UserRegisterDataDto;
 import com.sena.senasoft.domain.user.UserResponseDataDto;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +25,7 @@ public class Register {
      * @return
      */
     @PostMapping("/")
-    public ResponseEntity<UserResponseDataDto> saveUser(@RequestBody UserRegisterDataDto registerData){
+    public ResponseEntity<UserResponseDataDto> saveUser(@RequestBody @Valid UserRegisterDataDto registerData){
         if(registerData == null){
             throw new IllegalArgumentException("register data is null");
         }

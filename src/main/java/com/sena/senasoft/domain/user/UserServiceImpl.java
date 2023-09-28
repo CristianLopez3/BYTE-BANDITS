@@ -43,9 +43,11 @@ public class UserServiceImpl implements IUserService {
         User user = getUser(id);
         user.setName(userUpdateDto.name());
         user.setEducation(userUpdateDto.education());
-        user.setPassword(passwordEncoder.encode(userUpdateDto.password())); // encrypt password
+        if(userUpdateDto.password() != null){
+            user.setPassword(passwordEncoder.encode(userUpdateDto.password())); // encrypt password
+        }
         user.setCity(userUpdateDto.city());
-        user.setCity(userUpdateDto.interest());
+        user.setInterest(userUpdateDto.interest());
         userRepository.save(user);
         return new UserResponseDataDto(user);
     }
