@@ -1,5 +1,28 @@
 spring:
   datasource:
+    url: jdbc:mysql://localhost:3306/db_senasoft_api
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+server:
+  port: 9999
+  error:
+    include-stacktrace: never
+api:
+  security:
+    secret: ${JWT_SECRET:123456}
+logging:
+  level:
+    org:
+      springframework:
+       spring:
+  datasource:
     url: jdbc:mysql://localhost:3306/database_name
     username: root
     root: root
